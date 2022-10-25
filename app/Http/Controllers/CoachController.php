@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\IntercityTrip;
+use App\Models\IntercityVehicle;
 
 use Illuminate\Http\Request;
 

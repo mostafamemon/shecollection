@@ -35,12 +35,12 @@ class TripController extends Controller
 
             if($sl % 2 == 0){
                 if($company_id == 1) { $direction = "DOWN"; $route_id  = 2; }
-                if($company_id == 1) { $direction = "DOWN"; $route_id  = 40; }
-                if($company_id == 1) { $direction = "DOWN"; $route_id  = 88; }
+                if($company_id == 11) { $direction = "DOWN"; $route_id  = 40; }
+                if($company_id == 17) { $direction = "DOWN"; $route_id  = 88; }
             } else {
                 if($company_id == 1) { $direction = "UP"; $route_id  = 1; }
-                if($company_id == 1) { $direction = "UP"; $route_id  = 39; }
-                if($company_id == 1) { $direction = "UP"; $route_id  = 82; }
+                if($company_id == 11) { $direction = "UP"; $route_id  = 39; }
+                if($company_id == 17) { $direction = "UP"; $route_id  = 82; }
             }
 
             $coaches        = array_slice($vehicles, 0, $per_day_trip); 
@@ -79,7 +79,7 @@ class TripController extends Controller
                 array_push($trips,$trip);
             }
         }
-        return response()->json(count($trips));
+        
         $chunks = array_chunk($trips, 500);
         foreach ($chunks as $chunk){
 	        DB::table('intercity_trips')->insertOrIgnore($chunk);
