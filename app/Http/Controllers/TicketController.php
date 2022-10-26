@@ -26,7 +26,7 @@ class TicketController extends Controller
                 $ticket = [
                     'company_id'            => $company_id,
                     'trip_id'               => $trip->id,
-                    'pnr_code'              => substr(strtoupper(sha1(time())), 0, 15),
+                    'pnr_code'              => strtoupper($this->generateRandomString(15)),
                     'admin_id'              => $counterman['counterman_id'],
                     'passenger_name'        => "Mr./Mrs.",
                     'passenger_mobile'      => "+880",
@@ -248,5 +248,15 @@ class TicketController extends Controller
         else if($sl == 43) { return "K3"; }
         else if($sl == 44) { return "K4"; }
         else if($sl == 45) { return "K5"; }
+    }
+
+    function generateRandomString($length = 15) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }
