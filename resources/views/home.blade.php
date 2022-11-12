@@ -289,78 +289,16 @@
                                 <li><a href="#">MAKEUP SHOP</a></li>
                                 <li class="parent parent-submenu">
                                     <a > HAIR CARE SHOP  </a>
-                                    <span class="toggle-submenu"></span>
-                                    <div class="submenu drop-menu">
-                                        <ul >
-                                            <li><a href="">Shoes</a></li>
-                                            <li><a href="">Clothing</a></li>
-                                            <li><a href="">Accessories</a></li>
-                                            <li><a href="">Sunglasses</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
                                 <li class="parent parent-megamenu">
                                     <a >MENS PRODUCT  <span class="label-menu">New</span></a>
-                                    <span class="toggle-submenu"></span>
-                                    <div class="megamenu drop-menu">
-                                        <ul>
-                                            <li class="col-md-3">
-                                                <div class="img-categori">
-                                                    <a href=""><img alt="img" src="images/media/index1/img-categori1.jpg"></a>
-                                                </div>
-                                                <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                                <ul class="list-submenu">
-                                                    <li><a href="">Shoes</a></li>
-                                                    <li><a href="">Clothing</a></li>
-                                                    <li><a href="">Accessories</a></li>
-                                                    <li><a href="">Sunglasses</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="img-categori">
-                                                    <a href=""><img  alt="img"  src="images/media/index1/img-categori2.jpg"></a>
-                                                </div>
-                                                <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                                <ul class="list-submenu">
-                                                    <li><a href="">Shoes</a></li>
-                                                    <li><a href="">Clothing</a></li>
-                                                    <li><a href="">Accessories</a></li>
-                                                    <li><a href="">Sunglasses</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="img-categori">
-                                                    <a href=""><img alt="img"  src="images/media/index1/img-categori3.jpg"></a>
-                                                </div>
-                                                <strong class="title"><a href=""> <span>Kid's</span></a></strong>
-                                                <ul class="list-submenu">
-                                                    <li><a href="">Shoes</a></li>
-                                                    <li><a href="">Clothing</a></li>
-                                                    <li><a href="">Accessories</a></li>
-                                                    <li><a href="">Sunglasses</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="img-categori">
-                                                    <a href=""><img alt="img"  src="images/media/index1/img-categori4.jpg"></a>
-                                                </div>
-                                                <strong class="title"><a href=""><span>Trending</span> </a></strong>
-                                                <ul class="list-submenu">
-                                                    <li><a href="">Shoes</a></li>
-                                                    <li><a href="">Clothing</a></li>
-                                                    <li><a href="">Accessories</a></li>
-                                                    <li><a href="">Sunglasses</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </li>
                                 <li class="parent parent-megamenu">
                                     <a >HOT OFFERS </a>
                                     <span class="toggle-submenu"></span>
                                     <div class="megamenu drop-menu">
                                         <ul>
-                                            <li class="col-md-3">
+                                            <li class="col-md-4">
                                                 <strong class="title"><a href=""><span>Women's </span></a></strong>
                                                 <ul class="list-submenu">
                                                     <li><a href="">Shoes</a></li>
@@ -376,7 +314,7 @@
                                                     <li><a href="">Sunglasses</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="col-md-3">
+                                            <li class="col-md-4">
                                                 <strong class="title"><a href=""><span>Women's </span></a></strong>
                                                 <ul class="list-submenu">
                                                     <li><a href="">Shoes</a></li>
@@ -392,7 +330,7 @@
                                                     <li><a href="">Sunglasses</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="col-md-3">
+                                            <li class="col-md-4">
                                                 <strong class="title"><a href=""> <span>Kid's</span></a></strong>
                                                 <ul class="list-submenu">
                                                     <li><a href="">Shoes</a></li>
@@ -407,11 +345,6 @@
                                                     <li><a href="">Accessories</a></li>
                                                     <li><a href="">Sunglasses</a></li>
                                                 </ul>
-                                            </li>
-                                            <li class="col-md-3">
-                                                <div class="img-categori">
-                                                    <a href=""><img alt="img" src="images/media/index1/img-categori5.jpg"></a>
-                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -473,7 +406,7 @@
                                             <span class="text">Electronics</span>
                                         </a>
                                         <span class="toggle-submenu"></span>
-                                        <div class="submenu" style="background-image: url(images/media/index1/bgmenu.jpg);">
+                                        <div class="submenu">
                                             <ul class="categori-list clearfix">
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Smartphone</a></strong>
@@ -497,6 +430,16 @@
                                                 </li>
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Camera</a></strong>
+                                                    <ul>
+                                                        <li><a href="">Skirts    </a></li>
+                                                        <li><a href="">Jackets</a></li>
+                                                        <li><a href="">Jumpusuits</a></li>
+                                                        <li><a href="">Scarvest</a></li>
+                                                        <li><a href="">T-Shirts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <strong class="title"><a href="">Smartphone</a></strong>
                                                     <ul>
                                                         <li><a href="">Skirts    </a></li>
                                                         <li><a href="">Jackets</a></li>
@@ -529,6 +472,16 @@
                                                 </li>
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Camera</a></strong>
+                                                    <ul>
+                                                        <li><a href="">Skirts    </a></li>
+                                                        <li><a href="">Jackets</a></li>
+                                                        <li><a href="">Jumpusuits</a></li>
+                                                        <li><a href="">Scarvest</a></li>
+                                                        <li><a href="">T-Shirts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="col-sm-3">
+                                                    <strong class="title"><a href="">Smartphone</a></strong>
                                                     <ul>
                                                         <li><a href="">Skirts    </a></li>
                                                         <li><a href="">Jackets</a></li>
@@ -547,9 +500,6 @@
                                         </a>
                                         <span class="toggle-submenu"></span>
                                         <div class="submenu">
-                                            <div class="categori-img">
-                                                <a href=""><img src="images/media/index1/categori-img1.jpg" alt="categori-img"></a>
-                                            </div>
                                             <ul class="categori-list">
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Smartphone</a></strong>
@@ -599,90 +549,6 @@
                                             <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
                                             <span class="text">Television</span>
                                         </a>
-                                        <span class="toggle-submenu"></span>
-                                        <div class="submenu">
-                                            <strong class="subtitle"><span>special products</span></strong>
-                                            <div class="owl-carousel" 
-                                                data-nav="true" 
-                                                data-dots="false" 
-                                                data-margin="30" 
-                                                data-autoplayTimeout="300" 
-                                                data-autoplay="true" 
-                                                data-loop="true"
-                                                data-responsive='{
-                                                "0":{"items":1},
-                                                "380":{"items":1},
-                                                "480":{"items":1},
-                                                "600":{"items":1},
-                                                "992":{"items":4}
-                                                }'>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu1.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Asus Ispiron 20</a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu2.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Electronics Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu3.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Samsung Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu4.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Electronics Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu4.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Samsung Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </li>
                                     <li>
                                         <a href="">
