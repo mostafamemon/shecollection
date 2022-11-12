@@ -164,59 +164,18 @@
                             </div>
                             <div class="block-content">
                                 <div class="clearfix"><span data-action="close-cat" class="close-cate"><span>Categories</span></span></div>
+                                <!-- mobile categories -->
                                 <ul class="ui-categori">
                                     <li class="parent">
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat1.png" alt="nav-cat"></span>
-                                            Electronics
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Electronics</span>
                                         </a>
                                         <span class="toggle-submenu"></span>
-                                        <div class="submenu" style="background-image: url(images/media/index1/bgmenu.jpg);">
+                                        <div class="submenu">
                                             <ul class="categori-list clearfix">
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Camera</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <ul class="categori-list clearfix">
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
                                                     <ul>
                                                         <li><a href="">Skirts    </a></li>
                                                         <li><a href="">Jackets</a></li>
@@ -240,37 +199,14 @@
                                     </li>
                                     <li class="parent">
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat2.png" alt="nav-cat"></span>
-                                            Sports & Outdoors
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Sports & Outdoors</span>
                                         </a>
                                         <span class="toggle-submenu"></span>
                                         <div class="submenu">
-                                            <div class="categori-img">
-                                                <a href=""><img src="images/media/index1/categori-img1.jpg" alt="categori-img"></a>
-                                            </div>
                                             <ul class="categori-list">
                                                 <li class="col-sm-3">
                                                     <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Camera</a></strong>
                                                     <ul>
                                                         <li><a href="">Skirts    </a></li>
                                                         <li><a href="">Jackets</a></li>
@@ -292,160 +228,52 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="parent">
-                                        <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat3.png" alt="nav-cat"></span>
-                                            Smartphone & Tablets
-                                        </a>
-                                        <span class="toggle-submenu"></span>
-                                        <div class="submenu">
-                                            <strong class="subtitle"><span>special products</span></strong>
-                                            <div class="owl-carousel" 
-                                                data-nav="true" 
-                                                data-dots="false" 
-                                                data-margin="30" 
-                                                data-autoplayTimeout="300" 
-                                                data-autoplay="true" 
-                                                data-loop="true"
-                                                data-responsive='{
-                                                "0":{"items":1},
-                                                "380":{"items":1},
-                                                "480":{"items":1},
-                                                "600":{"items":1},
-                                                "992":{"items":4}
-                                                }'>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu1.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Asus Ispiron 20</a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu2.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Electronics Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu3.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Samsung Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu4.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Electronics Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product-item product-item-opt-1">
-                                                    <div class="product-item-info">
-                                                        <div class="product-item-photo">
-                                                            <a class="product-item-img" href=""><img alt="product name" src="images/media/index1/product-menu4.jpg"></a>
-                                                        </div>
-                                                        <div class="product-item-detail">
-                                                            <strong class="product-item-name"><a href="">Samsung Ispiron 20 </a></strong>
-                                                            <div class="product-item-price">
-                                                                <span class="price">$45.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat4.png" alt="nav-cat"></span>
-                                            Health & Beauty
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Health & Beauty</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat5.png" alt="nav-cat"></span>
-                                            Bags, Shoes & Accessories
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Bags, Shoes & Accessories</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat6.png" alt="nav-cat"></span>
-                                            Toys & Hobbies
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Toys & Hobbies</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat7.png" alt="nav-cat"></span>
-                                            Computers & Networking
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Computers & Networking</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat8.png" alt="nav-cat"></span>
-                                            Laptops & Accessories
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Laptop & Accessories</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat9.png" alt="nav-cat"></span>
-                                            Jewelry & Watches
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Jewellry & Watches</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat10.png" alt="nav-cat"></span>
-                                            Flashlights & Lamps
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Flashlights & Lamps</span>
                                         </a>
                                     </li>
                                     <li class="cat-link-orther">
                                         <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat10.png" alt="nav-cat"></span>
-                                            Flashlights & Lamps
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat9.png" alt="nav-cat"></span>
-                                            Cameras & Photo  
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat10.png" alt="nav-cat"></span>
-                                            Flashlights & Lamps
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="icon"><img src="images/icon/index1/nav-cat9.png" alt="nav-cat"></span>
-                                            Cameras & Photo  
+                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
+                                            <span class="text">&nbsp;&nbsp;Cameras & Photo</span>
                                         </a>
                                     </li>
                                 </ul>
