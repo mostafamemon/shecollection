@@ -1157,7 +1157,7 @@
                                             <div class=" product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-1.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-1.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1187,7 +1187,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-2.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-2.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1218,7 +1218,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-3.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-3.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1247,7 +1247,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-4.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-4.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1278,7 +1278,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-5.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-5.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1307,7 +1307,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-6.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-6.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1338,7 +1338,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-7.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-7.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1367,7 +1367,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-8.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-8.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1464,7 +1464,7 @@
                                             <div class=" product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-9.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-9.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1495,7 +1495,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-10.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-10.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1526,7 +1526,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-11.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-11.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1555,7 +1555,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-12.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-12.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1586,7 +1586,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-13.jpeg"></a>
+                                                        ]<img alt="product name" src="images/media/product-images/product-13.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1615,7 +1615,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-14.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-14.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1646,7 +1646,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-15.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-15.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1675,7 +1675,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-16.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-16.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1772,7 +1772,7 @@
                                             <div class=" product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-17.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-17.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1802,7 +1802,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-18.jpg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-18.jpg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1953,7 +1953,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-23.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-23.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -1982,7 +1982,7 @@
                                             <div class="product-item product-item-opt-2">
                                                 <div class="product-item-info">
                                                     <div class="product-item-photo">
-                                                        <a class="product-item-img" href=""><img alt="product name" src="images/media/product-images/product-24.jpeg"></a>
+                                                        <img alt="product name" src="images/media/product-images/product-24.jpeg">
                                                         <div class="product-item-actions">
                                                             <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
                                                             <a class="btn btn-quickview" href=""><span>quickview</span></a>
@@ -2114,34 +2114,34 @@
         </a>
     </div>
     <!-- jQuery -->    
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.min.js') }}"></script>
     <!-- sticky -->
-    <script type="text/javascript" src="js/jquery.sticky.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.sticky.js') }}"></script>
     <!-- OWL CAROUSEL Slider -->    
-    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/owl.carousel.min.js') }}"></script>
     <!-- Boostrap --> 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/bootstrap.min.js') }}"></script>
     <!-- Countdown --> 
-    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.countdown.min.js') }}"></script>
     <!--jquery Bxslider  -->
-    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.bxslider.min.js') }}"></script>
     <!-- actual --> 
-    <script type="text/javascript" src="js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.actual.min.js') }}"></script>
     <!-- jQuery UI -->
-    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery-ui.min.js') }}"></script>
     <!-- Chosen jquery-->    
-    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/chosen.jquery.min.js') }}"></script>
     <!-- parallax jquery--> 
-    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.parallax-1.1.3.js') }}"></script>
     <!-- elevatezoom --> 
-    <script type="text/javascript" src="js/jquery.elevateZoom.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/jquery.elevateZoom.min.js') }}"></script>
     <!-- fancybox -->
-    <script src="js/fancybox/source/jquery.fancybox.pack.js"></script>
-    <script src="js/fancybox/source/helpers/jquery.fancybox-media.js"></script>
-    <script src="js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script src="{{asset('js/fancybox/source/jquery.fancybox.pack.js') }}"></script>
+    <script src="{{asset('js/fancybox/source/helpers/jquery.fancybox-media.js') }}"></script>
+    <script src="{{asset('js/fancybox/source/helpers/jquery.fancybox-thumbs.js') }}"></script>
     <!-- arcticmodal -->
-    <script src="js/arcticmodal/jquery.arcticmodal.js"></script>
+    <script src="{{asset('js/arcticmodal/jquery.arcticmodal.js') }}"></script>
     <!-- Main -->  
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="{{asset('js/main.js') }}"></script>
 </body>
 </html>
