@@ -1101,11 +1101,11 @@
                             <span class="title" style="background-color: #7F091C !important">
                                 <span class="text text-center">Fashion</span>
                             </span>
-                            <div class="links dropdown">
+                            <div class="links dropdown mobile-hide">
                                 <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-bars" aria-hidden="true"></i>
                                 </button>
-                                <div class="dropdown-menu" >
+                                <div class="dropdown-menu">
                                     <ul  >
                                         <li role="presentation" class="active"><a href="#floor1-1"  role="tab" data-toggle="tab">New Arrivals <span class="label-cat">12</span></a></a></li>
                                         <li role="presentation"><a href="#floor1-2"  role="tab" data-toggle="tab">Top Selling</a></li>
@@ -1408,7 +1408,7 @@
                             <span class="title" style="background-color: #A1497A !important">
                                 <span class="text text-center">Fashion</span>
                             </span>
-                            <div class="links dropdown">
+                            <div class="links dropdown mobile-hide">
                                 <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-bars" aria-hidden="true"></i>
                                 </button>
@@ -1716,7 +1716,7 @@
                             <span class="title" style="background-color: #d17824 !important">
                                 <span class="text text-center">Fashion</span>
                             </span>
-                            <div class="links dropdown">
+                            <div class="links dropdown mobile-hide">
                                 <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="fa fa-bars" aria-hidden="true"></i>
                                 </button>
@@ -2047,19 +2047,19 @@
                                     <table class="address">
                                         <tr>
                                             <td><i class="fa fa-map-marker" aria-hidden="true"></i></td>
-                                            <td>2046 Blue Spruce Lane Laurel, tetxac, Orton Tolanto, Canada</td>
+                                            <td>House # 1018 (3rd floor), Road # 09, Avenue # 09, Mirpur DOHS, Dhaka-1216</td>
                                         </tr>
                                         <tr>
                                             <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-                                            <td>0200 410-369-3920</td>
+                                            <td>+880 17223 20532</td>
                                         </tr>
                                         <tr>
                                             <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                                            <td>info@html.kutethemes.com</td>
+                                            <td>support@shecollectionbd.com</td>
                                         </tr>
                                         <tr>
                                             <td><i class="fa fa-mobile" aria-hidden="true"></i></td>
-                                            <td>Hotline: 090 999 8686</td>
+                                            <td>Hotline: +880 17268 76206</td>
                                         </tr>
                                     </table>
                                 </div>

@@ -36283,6 +36283,9 @@ img.alignright {
   .slide-opt-1 {
     height: 300px !important;
   }
+  .footer-opt-3 {
+    padding-bottom:65px;
+  }
 }
 
 @media (min-width: 900px) {
