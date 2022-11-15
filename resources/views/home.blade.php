@@ -1434,7 +1434,7 @@
             </div>
         </main><!-- end MAIN -->
         
-        <footer class="site-footer footer-opt-3" style="padding-top:20px;padding-bottom:100px">
+        <footer class="site-footer footer-opt-3" style="padding-top:20px;">
             <div class="footer-content" style="background-image: url(images/media/bg-footer.jpeg);">
                 <div class="block-newletter">
                     <div class="container">
