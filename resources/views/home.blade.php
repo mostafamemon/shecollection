@@ -14,7 +14,7 @@
         <!-- HEADER -->
         <header class="site-header header-opt-1 cate-show">
             <!-- header-top -->
-            <div class="header-top mobile-hide">
+            <div class="header-top mobile-hide" style="background-color:#e23737;color:white !important;">
                 <div class="container">
                     <!-- nav-left -->
                     <ul class="nav-left">
@@ -81,13 +81,13 @@
             </div>
             <!-- header-top -->
             <!-- header-content -->
-            <div class="header-content">
+            <div class="header-content" style="background-color:#F05454;">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 nav-left">
                             <!-- logo -->
                             <strong class="logo">
-                                <a href=""><img src="images/media/index1/logo-sample.png" alt="logo"></a>
+                                <a href=""><img src="images/media/15.png" height="90" alt="logo"></a>
                             </strong>
                         </div>
                         <div class="col-md-6">
@@ -98,17 +98,14 @@
                                             <input type="text" class="form-control" placeholder="i'm Searching for...">
                                             <button class="btn btn-search" type="button"><span>search</span></button>
                                         </div>
-                                        <div class="search-bottom-text mobile-hide">Sunscreem</div>
-                                        <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
-                                        <div class="search-bottom-text-left mobile-hide">Face Wash</div>
-                                        <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
-                                        <div class="search-bottom-text-left mobile-hide">Shampoo</div>
-                                        <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
-                                        <div class="search-bottom-text-left mobile-hide">Baby Powder</div>
-                                        <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
-                                        <div class="search-bottom-text-left mobile-hide">Mattle Lipstick</div>
-                                        <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
-                                        <div class="search-bottom-text-left-last mobile-hide">Night Cream</div>
+                                        @php $total_search_bar_category = count($search_bar_categories); $sl = 0; @endphp
+                                        @foreach($search_bar_categories as $search_bar_category)
+                                            @php $sl = $sl + 1 @endphp
+                                            <div class="@if($sl == 1) search-bottom-text @else search-bottom-text-left @endif mobile-hide">{{ $search_bar_category->category_name }}</div>
+                                            @if($sl < $total_search_bar_category)
+                                            <div class="search-bottom-text-border mobile-hide">&nbsp;</div>
+                                            @endif
+                                        @endforeach
                                     </form>
                                 </div>
                             </div>
@@ -400,222 +397,25 @@
                             </div>
                             <div class="block-content">
                                 <ul class="ui-categori">
-                                    <li class="parent">
+                                    @foreach($categories as $category)
+                                    @php $sub_categories = get_sub_category($category->id); @endphp
+                                    <li @if(count($sub_categories) > 0) class="parent" @endif>
                                         <a href="">
                                             <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Electronics</span>
+                                            <span class="text">{{ $category->category_name }}</span>
                                         </a>
                                         <span class="toggle-submenu"></span>
                                         <div class="submenu">
                                             <ul class="categori-list clearfix">
-                                                <li class="col-sm-3">
+                                                <li class="col-sm-1">
+                                                    @foreach($sub_categories as $sub_category)
                                                     <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Camera</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                            <ul class="categori-list clearfix">
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Camera</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
+                                                    @endforeach
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="parent">
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Smartphone & Table</span>
-                                        </a>
-                                        <span class="toggle-submenu"></span>
-                                        <div class="submenu">
-                                            <ul class="categori-list">
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Smartphone</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">TElevision</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">Camera</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="col-sm-3">
-                                                    <strong class="title"><a href="">washing machine</a></strong>
-                                                    <ul>
-                                                        <li><a href="">Skirts    </a></li>
-                                                        <li><a href="">Jackets</a></li>
-                                                        <li><a href="">Jumpusuits</a></li>
-                                                        <li><a href="">Scarvest</a></li>
-                                                        <li><a href="">T-Shirts</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="parent">
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Television</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Shoes & Accessories</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Camera & Photo</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Watch & Jewellry</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Accessories</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Sport & Outdoors</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Computer & Networking</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Flashlights & Lamps</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Cameras & Photo</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Sport & Outdoors</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Watch & Jewellry</span>    
-                                        </a>
-                                    </li>
-                                    <li class="cat-link-orther">
-                                        <a href="">
-                                            <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                            <span class="text">Flashlights & Lamps</span>
-                                        </a>
-                                    </li>
+                                    @endforeach
                                 </ul>
                                 <div class="view-all-categori">
                                     <a  class="open-cate btn-view-all" style="font-weight: bold;">All Categories</a>
