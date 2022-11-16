@@ -38,7 +38,7 @@
                         @if($home_page_ctg_1->category_banner !="")
                             <img height="631" src="{{$backend_url}}/storage/{{ str_replace('public/', '', $home_page_ctg_1->category_banner) }}"/>
                         @else
-                            <img src="{{ asset('images/demo/433.jpg') }}" alt="baner-floor">
+                            <img src="{{ asset('images/demo/430x632.jpg') }}" alt="baner-floor">
                         @endif
                     </a>
                 </div>
@@ -84,7 +84,6 @@
                                                 <a class="btn btn-quickview" href=""><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
-                                            <span class="product-item-label label-price">30% <span>off</span></span>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products[$sl]->product_name }}</a></strong>
