@@ -135,6 +135,7 @@
             @livewire('home.block-banner-one')
             @livewire('home.hot-product')
             @livewire('home.block-banner-two')
+            @livewire('home.category-div-one')
         </header><!-- end HEADER -->        
         <!-- MAIN -->
         <main class="site-main">
