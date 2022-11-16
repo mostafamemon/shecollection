@@ -496,11 +496,12 @@
             </div>
             <div class="clearfix" style="background-color: #fff;padding-top:10px;">
                 <!-- block -floor -products / floor 1 :Fashion-->
+                @if($home_page_ctg_1 != "")
                 <div class="block-floor-products block-floor-products-opt2 floor-products1" id="floor0-1">
                     <div class="container">
                         <div class="block-title" style="border: 1px solid #EEE;">
                             <span class="title" style="background-color: #7F091C !important">
-                                <span class="text text-center">Fashion</span>
+                                <span class="text text-center">{{ $home_page_ctg_1->category_name}}</span>
                             </span>
                             <div class="links dropdown mobile-hide">
                                 <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -508,9 +509,9 @@
                                 </button>
                                 <div class="dropdown-menu">
                                     <ul  >
-                                        <li role="presentation" class="active"><a href="#floor1-1"  role="tab" data-toggle="tab">New Arrivals <span class="label-cat">12</span></a></a></li>
-                                        <li role="presentation"><a href="#floor1-2"  role="tab" data-toggle="tab">Top Selling</a></li>
-                                        <li role="presentation"><a href="#floor1-2"  role="tab" data-toggle="tab">Best Rated</a></li>
+                                        <li role="presentation" @if($home_page_ctg_1_active_type == "new_arrival") class="active" @endif><a href="#floor1-1"  role="tab" data-toggle="tab">New Arrivals</a></a></li>
+                                        <li role="presentation" @if($home_page_ctg_1_active_type == "top_selling") class="active" @endif><a href="#floor1-2"  role="tab" data-toggle="tab">Top Selling</a></li>
+                                        <li role="presentation" @if($home_page_ctg_1_active_type == "best_rated") class="active" @endif><a href="#floor1-2"  role="tab" data-toggle="tab">Best Rated</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -522,22 +523,22 @@
                         <div class="block-content">
                             <div class="col-categori" style="border: 1px solid #EEE;">
                                 <ul>
-                                    <li><a href="">Girf Sets</a></li>
-                                    <li><a href="">Shirt For Man</a></li>
-                                    <li><a href="">Maecenas</a></li>
-                                    <li><a href="">Accessories</a></li>
-                                    <li><a href="">Manicure & Pedicure</a></li>
-                                    <li><a href="">Bath & Spa</a></li>
-                                    <li><a href="">Hair Care</a></li>
-                                    <li class="cat-orther"><a href="">Girf Sets</a></li>
-                                    <li class="cat-orther"><a href="">ARM</a></li>
-                                    <li class="cat-orther"><a href="">Accessories</a></li>
-                                    <li class="cat-orther"><a href="">Hair Care</a></li>
+                                    @php $sub_categories = get_sub_category($home_page_ctg_1->id); @endphp
+                                    @foreach($sub_categories as $sub)
+                                    @php if($loop->iteration > 18) break; @endphp
+                                    <li><a href="">{{ $sub->sub_category_name}}</a></li>
+                                    @endforeach
                                 </ul>
                                 <a class="btn-show-cat btn-cat">All categories <i aria-hidden="true" class="fa fa-angle-double-right"></i></a>
                             </div>
                             <div class="col-banner">
-                                <a href="" class="box-img"><img src="images/media/main-display/banner-1.jpg" alt="baner-floor"></a>
+                                <a href="" class="box-img">
+                                    @if($home_page_ctg_1->category_banner !="")
+                                        <img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $home_page_ctg_1->category_banner) }}"/>
+                                    @else
+                                        <img src="{{ asset('images/demo/430x563.jpg') }}" alt="baner-floor">
+                                    @endif
+                                </a>
                             </div>
                             <div class="col-products tab-content">
                                 <!-- tab 1 -->
@@ -802,6 +803,7 @@
                         </div>
                     </div>
                 </div>
+                @endif 
 
                 <div class="block-floor-products block-floor-products-opt2 floor-products1" id="floor0-1">
                     <div class="container">

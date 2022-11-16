@@ -13,7 +13,35 @@ class HomeController extends Controller
         $backend_url        = config('app.backend_url');
         $hot_products       = EcomProduct::select('id','product_name','hot_product_image')->where('hot_product',1)->limit(8)->get();
         $categories         = EcomCategory::select('id','category_name')->orderBy('category_name','asc')->get();
-        $search_bar_categories = EcomCategory::select('id','category_name')->where('show_in_search_bar',1)->limit(6)->get();
-        return view('home',compact('backend_url','categories','search_bar_categories','hot_products'));
+        $search_bar_categories  = EcomCategory::select('id','category_name')->where('show_in_search_bar',1)->limit(6)->get();
+        
+        $home_page_ctg_1   = EcomCategory::select('id','category_name','category_banner')->where('show_in_home_page',1)->offset(0)->limit(1)->first(); 
+        $home_page_ctg_2   = EcomCategory::select('id','category_name','category_banner')->where('show_in_home_page',1)->offset(1)->limit(1)->first(); 
+        $home_page_ctg_3   = EcomCategory::select('id','category_name','category_banner')->where('show_in_home_page',1)->offset(2)->limit(1)->first(); 
+
+        $home_page_ctg_1_active_type = "";
+        $home_page_ctg_2_active_type = "";
+        $home_page_ctg_3_active_type = "";
+
+        $home_page_ctg_1_active_sub = "";
+        $home_page_ctg_2_active_sub = "";
+        $home_page_ctg_3_active_sub = "";
+
+        return view('home',compact(
+            'backend_url',
+            'categories',
+            'search_bar_categories',
+            'hot_products',
+
+            'home_page_ctg_1',
+            'home_page_ctg_2',
+            'home_page_ctg_3',
+            'home_page_ctg_1_active_type',
+            'home_page_ctg_2_active_type',
+            'home_page_ctg_3_active_type',
+            'home_page_ctg_1_active_sub',
+            'home_page_ctg_2_active_sub',
+            'home_page_ctg_3_active_sub'
+        ));
     }
 }
