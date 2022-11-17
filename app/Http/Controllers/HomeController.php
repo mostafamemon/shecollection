@@ -10,6 +10,9 @@ class HomeController extends Controller
 {
     public function index()
     {
+        if(isset($_GET['ctg1_filter'])) {
+            dd($_GET['ctg1_filter']);
+        }
         $backend_url        = config('app.backend_url');
         $hot_products       = EcomProduct::select('id','product_name','hot_product_image')->where('hot_product',1)->limit(8)->get();
         $categories         = EcomCategory::select('id','category_name')->orderBy('category_name','asc')->get();

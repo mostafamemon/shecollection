@@ -23749,7 +23749,7 @@ img.alignright {
   border-right: 1px solid #eeeeee;
 }
 .block-floor-products-opt2 .col-banner .box-img {
-  height: 631px;
+  height: 600px;
   display: block;
 }
 @media (max-width: 1199px) {
@@ -36289,6 +36289,14 @@ img.alignright {
     margin-bottom:100px !important;
     padding-bottom:530px !important;
   }
+
+  .col-product {
+    margin-left:10px !important;
+    text-align:center;
+    width: 320px !important;
+    padding: 0px;
+    float:left !important;
+  }
 }
 
 @media (min-width: 900px) {
@@ -36299,4 +36307,10 @@ img.alignright {
   .slide-opt-1 {
     height: 485px !important;
   }
+
+  .col-product {
+    width: 210px !important;
+    float:left;
+  }
 }
+

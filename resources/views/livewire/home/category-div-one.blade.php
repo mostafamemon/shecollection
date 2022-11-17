@@ -36,7 +36,7 @@
                 <div class="col-banner">
                     <a href="" class="box-img">
                         @if($home_page_ctg_1->category_banner !="")
-                            <img height="631" src="{{$backend_url}}/storage/{{ str_replace('public/', '', $home_page_ctg_1->category_banner) }}"/>
+                            <img src="{{ asset('images/demo/430x632.jpg') }}" alt="baner-floor">
                         @else
                             <img src="{{ asset('images/demo/430x632.jpg') }}" alt="baner-floor">
                         @endif
@@ -44,10 +44,10 @@
                 </div>
                 <div class="col-products tab-content">
                     <!-- tab 1 -->
-                    <div class="tab-pane active in  fade " id="floor1-1" role="tabpanel">
+                    <div class="" id="floor1-1" role="tabpanel">
                         <div>
                         @php 
-                            echo $total_product = count($products);
+                            $total_product = count($products);
                             $total_row = ceil($total_product / 2); 
                             $sl = 0;
                         @endphp
@@ -60,8 +60,8 @@
                             elseif($loop->iteration == 5) { $sl = 8; }
                             if($loop->iteration > $total_row) break;
                         @endphp
-                            <div class="col-md-3" style="width:205px">
-                                <div class=" product-item product-item-opt-2">
+                            <div class="col-product">
+                                <div class="product-item product-item-opt-2" style="float:left">
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products[$sl]->product_page_main_image !="")
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                                 @if(isset($products[$sl + 1]))
-                                <div class="product-item product-item-opt-2">
+                                <div class="product-item product-item-opt-2" style="float:left">
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products[$sl + 1]->product_page_main_image !="")
@@ -136,4 +136,4 @@
             </div>
         </div>
     </div>
-@endif 
+    @endif 

@@ -50,7 +50,8 @@ class CategoryDivOne extends Component
         if($this->sub_category_id != "") {
             $products->where('sub_category_id',$this->sub_category_id);
         }
-        $this->products = $products->limit(10)->get();
+        $this->products = $products->orderBy('product_name','asc')->limit(6)->get();
+        
     }
 
     public function render()
