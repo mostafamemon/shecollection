@@ -129,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            @livewire('home.header-nav')
+            @livewire('layouts.header-nav')
         </header>
         <main class="site-main">
             {{ $slot }}

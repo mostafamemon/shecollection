@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Home;
+namespace App\Http\Livewire\Layouts;
 
 use Livewire\Component;
 use App\Models\EcomCategory;
@@ -16,6 +16,6 @@ class HeaderNav extends Component
     
     public function render()
     {
-        return view('livewire.home.header-nav');
+        return view('livewire.layouts.header-nav');
     }
 }
