@@ -130,18 +130,10 @@
                 </div>
             </div>
             @livewire('home.header-nav')
-            @livewire('home.category-and-banner')
-            @livewire('home.service-facility')
-            @livewire('home.block-banner-one')
-            @livewire('home.hot-product')
-            @livewire('home.block-banner-two')
-            @livewire('home.category-div-one')
-        </header><!-- end HEADER -->        
-        <!-- MAIN -->
+        </header>
         <main class="site-main">
-            
-            @yield('content')
-        </main><!-- end MAIN -->
+            {{ $slot }}
+        </main>
         
         <footer class="site-footer footer-opt-3" style="padding-top:20px;">
             <div class="footer-content" style="background-image: url(images/media/bg-footer.jpeg);">
