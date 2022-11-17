@@ -2,6 +2,7 @@
     <div class="container">
         <div class="box-section-top">
             <!-- categori -->
+            @desktop
             <div class="block-nav-categori">
                 <div class="block-title">
                     <span>Categories</span>
@@ -36,8 +37,9 @@
                         <a  class="open-cate btn-view-all" style="font-weight: bold;">All Categories</a>
                     </div>
                 </div>
-            </div><!-- categori -->
-            <!-- block slide top -->
+            </div>
+            @enddesktop
+            
             <div class="block-slide-main slide-opt-1">
                 <!-- slide -->
                 <div class="owl-carousel dotsData"
