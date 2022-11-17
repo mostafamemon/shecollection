@@ -45,18 +45,7 @@
                 <div class="col-products tab-content">
                     <!-- tab 1 -->
                     <div class="tab-pane active in  fade " id="floor1-1" role="tabpanel">
-                        <div class="owl-carousel" 
-                            data-nav="true" 
-                            data-dots="false" 
-                            data-margin="0" 
-                            data-responsive='{
-                            "0":{"items":1},
-                            "420":{"items":2},
-                            "600":{"items":3},
-                            "768":{"items":3},
-                            "992":{"items":3},
-                            "1200":{"items":3}
-                        }'>
+                        <div>
                         @php 
                             echo $total_product = count($products);
                             $total_row = ceil($total_product / 2); 
@@ -71,7 +60,7 @@
                             elseif($loop->iteration == 5) { $sl = 8; }
                             if($loop->iteration > $total_row) break;
                         @endphp
-                            <div class="item">
+                            <div class="col-md-3" style="width:205px">
                                 <div class=" product-item product-item-opt-2">
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
@@ -147,4 +136,4 @@
             </div>
         </div>
     </div>
-    @endif 
+@endif 

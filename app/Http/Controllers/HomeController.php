@@ -27,6 +27,8 @@ class HomeController extends Controller
         $home_page_ctg_2_active_sub = "";
         $home_page_ctg_3_active_sub = "";
 
+        $home_page_ctg_1_products = EcomProduct::where('category_id',$home_page_ctg_1->id)->limit(10)->get();
+
         return view('home',compact(
             'backend_url',
             'categories',
@@ -41,7 +43,8 @@ class HomeController extends Controller
             'home_page_ctg_3_active_type',
             'home_page_ctg_1_active_sub',
             'home_page_ctg_2_active_sub',
-            'home_page_ctg_3_active_sub'
+            'home_page_ctg_3_active_sub',
+            'home_page_ctg_1_products'
         ));
     }
 }
