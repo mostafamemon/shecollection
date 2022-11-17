@@ -723,7 +723,7 @@ select.input-sm {
   width: 100%;
   display: block;
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   position: absolute;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -36299,4 +36299,12 @@ img.alignright {
   .slide-opt-1 {
     height: 485px !important;
   }
+}
+.owl-carousel-self {
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  z-index: 1;
+  visibility: visible;
 }

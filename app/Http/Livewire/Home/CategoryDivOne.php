@@ -23,7 +23,7 @@ class CategoryDivOne extends Component
 
     public function changeFilterByType($filter_by_type)
     {
-        $this->filter_by_type = $filter_by_type;
+        $this->filter_by_type   = $filter_by_type;
         $this->filter();
     }
 
@@ -47,7 +47,9 @@ class CategoryDivOne extends Component
                 $products->where('best_rated',1);
             }
         }
-        
+        if($this->sub_category_id != "") {
+            $products->where('sub_category_id',$this->sub_category_id);
+        }
         $this->products = $products->limit(10)->get();
     }
 
