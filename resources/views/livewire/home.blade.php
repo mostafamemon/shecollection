@@ -4,5 +4,5 @@
     @livewire('home.block-banner-one')
     @livewire('home.hot-product')
     @livewire('home.block-banner-two')
-    @livewire('home.category-div-one')
+    @livewire('home.home-page-category')
 </div>
