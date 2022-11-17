@@ -17,7 +17,7 @@
                         <li class="@if(count($sub_categories) > 0) parent @endif @if($sl > 11) cat-link-orther @endif">
                             <a href="">
                                 <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
-                                <span class="text">{{ $category->category_name }}</span>
+                                <span class="text" style="font-size:15px;">{{ $category->category_name }}</span>
                             </a>
                             <span class="toggle-submenu"></span>
                             <div class="submenu">

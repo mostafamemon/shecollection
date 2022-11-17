@@ -92,15 +92,15 @@
                             </strong>
                         </div>
                         @livewire('home.search-bar-category')
-                        <div class="col-md-3 mobile-hide">
+                        <div class="col-md-3 mobile-hide" style="padding-top:20px">
                             <div class="row">
                                 <div class="col-md-4" style="padding-top:5px;padding-left: 15px;padding-right: 0px;">
                                     <div style="color:white;font-size:24px;float:left">
                                         <i class="fa fa-heart-o"></i>
                                     </div>
                                     <div style="color:white;font-size:24px;float:left;margin-top:-15px;padding-left:5px">
-                                        <div class="badge" style="background-color: #F05454">0</div>
-                                        <div style="font-size:12px;margin-top:-3px">Wishlist</div>
+                                        <div class="badge" style="background-color: #B33D95;font-size:15px;">10</div>
+                                        <div style="font-size:14px;margin-top:-3px">Wishlist</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="padding-top:5px;padding-left: 0px;padding-right: 0px;">
@@ -108,20 +108,20 @@
                                         <i class="fa fa-opencart"></i>
                                     </div>
                                     <div style="color:white;font-size:24px;float:left;margin-top:-15px;padding-left:5px">
-                                        <div class="badge" style="background-color: #F05454">0</div>
-                                        <div style="font-size:12px;margin-top:-3px">My Cart</div>
+                                        <div class="badge" style="background-color: #EC008C;font-size:15px;">0</div>
+                                        <div style="font-size:14px;margin-top:-3px">My Cart</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="display:none;padding-top:5px;padding-left: 0px;padding-right: 0px;">
                                     <div style="color:white;font-size:24px;float:left;margin-top:3px;padding-left:5px">
-                                        <div style="font-size:11px;margin-top:-3px">Hello Guest!</div>
-                                        <div style="font-size:13px;">Login / Register</div>
+                                        <div style="font-size:14px;margin-top:-3px">Hello Guest!</div>
+                                        <div style="font-size:14px;">Login / Register</div>
                                     </div>
                                 </div>
                                 <div class="col-md-4" style="padding-top:5px;padding-left: 0px;padding-right: 0px;">
                                     <div style="color:white;font-size:24px;float:left;margin-top:3px;padding-left:5px">
-                                        <div style="font-size:11px;margin-top:-3px">Hello Mostafa!</div>
-                                        <div style="font-size:13px;">My Profile</div>
+                                        <div style="font-size:14px;margin-top:-3px">Hello Mostafa!</div>
+                                        <div style="font-size:14px;">My Profile</div>
                                     </div>
                                 </div>
                             </div>

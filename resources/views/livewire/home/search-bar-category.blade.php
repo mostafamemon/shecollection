@@ -1,6 +1,6 @@
 <div class="col-md-6">
     <div class="block-search">
-        <div class="form-search">
+        <div class="form-search pd-t-20-pc">
             <form>
                 <div class="box-group">
                     <input type="text" class="form-control" placeholder="i'm Searching for...">
