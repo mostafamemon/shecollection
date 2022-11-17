@@ -11,9 +11,9 @@
                     </button>
                     <div class="dropdown-menu">
                         <ul  >
-                            <li role="presentation" @if($filter_by_type_1  == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_1('new_arrival')">New Arrivals</a></a></li>
-                            <li role="presentation" @if($filter_by_type_1  == "top_selling") class="active" @endif><a wire:click="changeFilterByType_1('top_selling')">Top Selling</a></li>
-                            <li role="presentation" @if($filter_by_type_1  == "best_rated") class="active" @endif><a wire:click="changeFilterByType_1('best_rated')">Best Rated</a></li>
+                            <li role="presentation" @if($filter_by_type_1  == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_1('new_arrival')" style="font-size:16px">New Arrivals</a></a></li>
+                            <li role="presentation" @if($filter_by_type_1  == "top_selling") class="active" @endif><a wire:click="changeFilterByType_1('top_selling')" style="font-size:16px">Top Selling</a></li>
+                            <li role="presentation" @if($filter_by_type_1  == "best_rated") class="active" @endif><a wire:click="changeFilterByType_1('best_rated')" style="font-size:16px">Best Rated</a></li>
                         </ul>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                         @php $sub_categories = get_sub_category($home_page_ctg_1->id); @endphp
                         @foreach($sub_categories as $sub)
                         @php if($loop->iteration > 18) break; @endphp
-                        <li><a wire:click="chageSubCategory_1({{$sub->id}})" style="cursor:pointer; @if($sub_category_id_1  == $sub->id) color:#F05454;font-size:15px; @endif">{{ $sub->sub_category_name}}</a></li>
+                        <li><a wire:click="chageSubCategory_1({{$sub->id}})" style="cursor:pointer;font-size:15px; @if($sub_category_id_1  == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
                     <a class="btn-show-cat btn-cat">All categories <i aria-hidden="true" class="fa fa-angle-double-right"></i></a>
@@ -151,10 +151,10 @@
                         <i class="fa fa-bars" aria-hidden="true"></i>
                     </button>
                     <div class="dropdown-menu">
-                        <ul  >
-                            <li role="presentation" @if($filter_by_type_2 == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_2('new_arrival')">New Arrivals</a></a></li>
-                            <li role="presentation" @if($filter_by_type_2 == "top_selling") class="active" @endif><a wire:click="changeFilterByType_2('top_selling')">Top Selling</a></li>
-                            <li role="presentation" @if($filter_by_type_2 == "best_rated") class="active" @endif><a wire:click="changeFilterByType_2('best_rated')">Best Rated</a></li>
+                        <ul>
+                            <li role="presentation" @if($filter_by_type_2 == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_2('new_arrival')" style="font-size:16px">New Arrivals</a></a></li>
+                            <li role="presentation" @if($filter_by_type_2 == "top_selling") class="active" @endif><a wire:click="changeFilterByType_2('top_selling')" style="font-size:16px">Top Selling</a></li>
+                            <li role="presentation" @if($filter_by_type_2 == "best_rated") class="active" @endif><a wire:click="changeFilterByType_2('best_rated')" style="font-size:16px">Best Rated</a></li>
                         </ul>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
                         @php $sub_categories = get_sub_category($home_page_ctg_2->id); @endphp
                         @foreach($sub_categories as $sub)
                         @php if($loop->iteration > 18) break; @endphp
-                        <li><a wire:click="chageSubCategory_2({{$sub->id}})" style="cursor:pointer; @if($sub_category_id_2 == $sub->id) color:#F05454;font-size:15px; @endif">{{ $sub->sub_category_name}}</a></li>
+                        <li><a wire:click="chageSubCategory_2({{$sub->id}})" style="cursor:pointer;font-size:15px; @if($sub_category_id_2 == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
                     <a class="btn-show-cat btn-cat">All categories <i aria-hidden="true" class="fa fa-angle-double-right"></i></a>
@@ -293,9 +293,9 @@
                     </button>
                     <div class="dropdown-menu">
                         <ul  >
-                            <li role="presentation" @if($filter_by_type_3 == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_3('new_arrival')">New Arrivals</a></a></li>
-                            <li role="presentation" @if($filter_by_type_3 == "top_selling") class="active" @endif><a wire:click="changeFilterByType_3('top_selling')">Top Selling</a></li>
-                            <li role="presentation" @if($filter_by_type_3 == "best_rated") class="active" @endif><a wire:click="changeFilterByType_3('best_rated')">Best Rated</a></li>
+                            <li role="presentation" @if($filter_by_type_3 == "new_arrival") class="active" @endif><a wire:click="changeFilterByType_3('new_arrival')" style="font-size:16px">New Arrivals</a></a></li>
+                            <li role="presentation" @if($filter_by_type_3 == "top_selling") class="active" @endif><a wire:click="changeFilterByType_3('top_selling')" style="font-size:16px">Top Selling</a></li>
+                            <li role="presentation" @if($filter_by_type_3 == "best_rated") class="active" @endif><a wire:click="changeFilterByType_3('best_rated')" style="font-size:16px">Best Rated</a></li>
                         </ul>
                     </div>
                 </div>
@@ -310,7 +310,7 @@
                         @php $sub_categories = get_sub_category($home_page_ctg_3->id); @endphp
                         @foreach($sub_categories as $sub)
                         @php if($loop->iteration > 18) break; @endphp
-                        <li><a wire:click="chageSubCategory_3({{$sub->id}})" style="cursor:pointer; @if($sub_category_id_3 == $sub->id) color:#F05454;font-size:15px; @endif">{{ $sub->sub_category_name}}</a></li>
+                        <li><a wire:click="chageSubCategory_3({{$sub->id}})" style="cursor:pointer;font-size:15px;@if($sub_category_id_3 == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
                     <a class="btn-show-cat btn-cat">All categories <i aria-hidden="true" class="fa fa-angle-double-right"></i></a>
