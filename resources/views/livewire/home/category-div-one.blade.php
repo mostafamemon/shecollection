@@ -3,7 +3,7 @@
         <div class="container">
             <div class="block-title" style="border: 1px solid #EEE;">
                 <span class="title" style="background-color: #7F091C !important">
-                    <span class="text text-center">{{ $home_page_ctg_1->category_name}}</span>
+                    <div class="text text-center" style="width:155px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ $home_page_ctg_1->category_name}}</div>
                 </span>
                 <div class="links dropdown mobile-hide">
                     <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -143,8 +143,8 @@
     <div class="block-floor-products block-floor-products-opt2 floor-products1" id="floor0-1">
         <div class="container">
             <div class="block-title" style="border: 1px solid #EEE;">
-                <span class="title" style="background-color: #7F091C !important">
-                    <span class="text text-center">{{ $home_page_ctg_2->category_name}}</span>
+                <span class="title" style="background-color: #A1497A !important">
+                    <div class="text text-center" style="width:155px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ $home_page_ctg_2->category_name}}</div>
                 </span>
                 <div class="links dropdown mobile-hide">
                     <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -284,8 +284,8 @@
     <div class="block-floor-products block-floor-products-opt2 floor-products1" id="floor0-1">
         <div class="container">
             <div class="block-title" style="border: 1px solid #EEE;">
-                <span class="title" style="background-color: #7F091C !important">
-                    <span class="text text-center">{{ $home_page_ctg_3->category_name}}</span>
+                <span class="title" style="background-color: #d17824 !important">
+                    <div class="text text-center" style="width:155px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{{ $home_page_ctg_3->category_name}}</div>
                 </span>
                 <div class="links dropdown mobile-hide">
                     <button class="dropdown-toggle"  type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
