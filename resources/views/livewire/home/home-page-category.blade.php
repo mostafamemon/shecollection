@@ -71,7 +71,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
@@ -105,7 +105,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl+1]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
@@ -212,7 +212,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
@@ -246,7 +246,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
@@ -353,7 +353,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_3[$sl]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
@@ -387,7 +387,7 @@
                                             @endif
                                             <div class="product-item-actions">
                                                 <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href=""><span>quickview</span></a>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
                                             <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>

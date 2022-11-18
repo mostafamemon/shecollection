@@ -28,7 +28,7 @@
                             @endif
                         >
                             <div class="title"><div style="padding-top:25px;width:130px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;">{{ $hot_products[$sl]->product_name }}</div></div>
-                            <a href="/preview/{{ $hot_products[$sl]->id }}" class="btn">buy now</a>
+                            <a href="/product?id={{ $hot_products[$sl]->id }}" class="btn">buy now</a>
                         </div>
                     </div>
                     @if(isset($hot_products[$sl + 1]))
@@ -41,7 +41,7 @@
                             @endif
                         >
                             <div class="title"><div style="padding-top:25px;width:130px;white-space:nowrap;overflow:hidden;text-overflow: ellipsis;">{{ $hot_products[$sl + 1]->product_name }}</div></div>
-                            <a href="/preview/{{ $hot_products[$sl + 1]->id }}" class="btn">buy now</a>
+                            <a href="/product?id={{ $hot_products[$sl + 1]->id }}" class="btn">buy now</a>
                         </div>
                     </div>
                     @endif
