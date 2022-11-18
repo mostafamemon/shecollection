@@ -50,69 +50,10 @@
             <div class="block-nav-menu">
                 <div class="clearfix"><span data-action="close-nav" class="close-nav"><span>close</span></span></div>
                 <ul class="ui-menu">
-                    <li><a href="#">MAKEUP SHOP</a></li>
-                    <li class="parent parent-submenu">
-                        <a > HAIR CARE SHOP  </a>
-                    </li>
-                    <li class="parent parent-megamenu">
-                        <a >MENS PRODUCT  <span class="label-menu">New</span></a>
-                    </li>
-                    <li class="parent parent-megamenu">
-                        <a >HOT OFFERS </a>
-                        <span class="toggle-submenu"></span>
-                        <div class="megamenu drop-menu">
-                            <ul>
-                                <li class="col-md-4">
-                                    <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                    <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                </li>
-                                <li class="col-md-4">
-                                    <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                    <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                </li>
-                                <li class="col-md-4">
-                                    <strong class="title"><a href=""> <span>Kid's</span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                    <strong class="title"><a href=""><span>Women's </span></a></strong>
-                                    <ul class="list-submenu">
-                                        <li><a href="">Shoes</a></li>
-                                        <li><a href="">Clothing</a></li>
-                                        <li><a href="">Accessories</a></li>
-                                        <li><a href="">Sunglasses</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="#"> NEW ARRIVAL </a></li>
+                    <li><a href="#"> TOP SELLING </a></li>
+                    <li><a href="#"> BEST RATED </a></li>
+                    <li><a href="#"> HOT PRODUCTS </a></li>
                     <li><a href="#"> CLEARENSE </a></li>
                 </ul>
             </div>
