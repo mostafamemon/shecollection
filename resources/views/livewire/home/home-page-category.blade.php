@@ -79,7 +79,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 420</span>
+                                                    <span class="price">Tk. {{ $products_1[$sl]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
@@ -113,7 +113,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl + 1]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 650</span>
+                                                    <span class="price">Tk. {{ $products_1[$sl + 1]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
@@ -220,7 +220,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 420</span>
+                                                    <span class="price">Tk. {{ $products_2[$sl]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
@@ -254,7 +254,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl + 1]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 650</span>
+                                                    <span class="price">Tk. {{ $products_2[$sl + 1]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
@@ -361,7 +361,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 420</span>
+                                                    <span class="price">Tk. {{ $products_3[$sl]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
@@ -395,7 +395,7 @@
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl + 1]->product_name }}</a></strong>
                                             <div class="clearfix">
                                                 <div class="product-item-price">
-                                                    <span class="price">Tk. 650</span>
+                                                    <span class="price">Tk. {{ $products_3[$sl + 1]->price }}</span>
                                                 </div>
                                                 <div class="product-reviews-summary">
                                                     <div class="rating-summary">
