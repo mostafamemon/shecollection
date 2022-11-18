@@ -112,18 +112,21 @@
                                         <div style="font-size:14px;margin-top:-3px">My Cart</div>
                                     </div>
                                 </div>
-                                <div class="col-md-4" style="display:none;padding-top:5px;padding-left: 0px;padding-right: 0px;">
-                                    <div style="color:white;font-size:24px;float:left;margin-top:3px;padding-left:5px">
-                                        <div style="font-size:14px;margin-top:-3px">Hello Guest!</div>
-                                        <div style="font-size:14px;">Login / Register</div>
-                                    </div>
-                                </div>
+                                @if(auth()->user())
                                 <div class="col-md-4" style="padding-top:5px;padding-left: 0px;padding-right: 0px;">
                                     <div style="color:white;font-size:24px;float:left;margin-top:3px;padding-left:5px">
-                                        <div style="font-size:14px;margin-top:-3px">Hello Mostafa!</div>
-                                        <div style="font-size:14px;">My Profile</div>
+                                        <div style="font-size:14px;margin-top:-3px">Hello, {{ explode(' ', trim(auth()->user()->name))[0] }}!</div>
+                                        @livewire('layouts.logout')
                                     </div>
                                 </div>
+                                @else
+                                <div class="col-md-4" style="padding-top:5px;padding-left: 0px;padding-right: 0px;">
+                                    <div style="color:white;font-size:24px;float:left;margin-top:3px;padding-left:5px">
+                                        <div style="font-size:14px;margin-top:-3px">Hello, Guest!</div>
+                                        <div style="font-size:14px;"><a href="login" style="color:white">Login</a> / <a href="register" style="color:white">Register</a></div>
+                                    </div>
+                                </div>
+                                @endif
                             </div>
                         </div>
                     </div>
