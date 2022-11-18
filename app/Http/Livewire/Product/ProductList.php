@@ -29,7 +29,7 @@ class ProductList extends Component
     public function filter()
     {
         if($this->search_text != "") {
-            $this->products = EcomProduct::where('product_name','like','%'.$this->search_text.'%')->limit(40)->get();
+            $this->products = EcomProduct::where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
         } else {
             $this->products = EcomProduct::limit(40)->get();
         }
