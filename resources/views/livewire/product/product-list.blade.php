@@ -5,6 +5,24 @@
     </ol>
     @endif
 
+    @if($category_id != "")
+    <ol class="breadcrumb no-hide">
+        <li>Category: <span style="font-size:15px;font-weight:bold">{{ get_category_name($category_id) }}</span></li>
+    </ol>
+    @endif
+
+    @if($sub_category_id != "")
+    <ol class="breadcrumb no-hide">
+        <li>Sub Category: <span style="font-size:15px;font-weight:bold">{{ get_sub_category_name($sub_category_id) }}</span></li>
+    </ol>
+    @endif
+
+    @if($filter_by != "")
+    <ol class="breadcrumb no-hide">
+        <li>Filter: <span style="font-size:15px;font-weight:bold;">{{ str_replace("_"," ",$filter_by) }}</span></li>
+    </ol>
+    @endif
+
     <div class="row">
 
         <!-- Main Content -->

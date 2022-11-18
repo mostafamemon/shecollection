@@ -11,8 +11,8 @@ class ProductList extends Component
     use LivewireAlert;
 
     public $category_id     = "";
-    public $sub_cagegory_id = "";
-    public $filter_type     = "";
+    public $sub_category_id = "";
+    public $filter_by       = "";
     public $search_text     = "";
     public $products        = [];
     public $backend_url     = "";
@@ -20,8 +20,32 @@ class ProductList extends Component
     public function mount()
     {
         $this->backend_url  = config('app.backend_url');
-        if(isset($_GET['s'])) {
-            $this->search_text = $_GET['s'];
+        if(isset($_GET['search'])) {
+            $this->category_id      = "";
+            $this->sub_cagegory_id  = "";
+            $this->filter_by        = "";
+            $this->search_text = $_GET['search'];
+            $this->filter();
+        }
+        if(isset($_GET['category'])) {
+            $this->search_text      = "";
+            $this->sub_cagegory_id  = "";
+            $this->filter_by        = "";
+            $this->category_id = $_GET['category'];
+            $this->filter();
+        }
+        if(isset($_GET['subcategory'])) {
+            $this->search_text      = "";
+            $this->category_id      = "";
+            $this->filter_by        = "";
+            $this->sub_category_id = $_GET['subcategory'];
+            $this->filter();
+        }
+        if(isset($_GET['filter'])) {
+            $this->search_text      = "";
+            $this->cagegory_id      = "";
+            $this->sub_cagegory_id  = "";
+            $this->filter_by        = $_GET['filter'];
             $this->filter();
         }
     }
@@ -30,7 +54,27 @@ class ProductList extends Component
     {
         if($this->search_text != "") {
             $this->products = EcomProduct::where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
-        } else {
+        }
+        if($this->category_id != "") {
+            $this->products = EcomProduct::where('category_id',$this->category_id)->limit(40)->get();
+        }
+        if($this->sub_category_id != "") {
+            $this->products = EcomProduct::where('sub_category_id',$this->sub_category_id)->limit(40)->get();
+        }
+        if($this->filter_by != "") {
+            if($this->filter_by == "new_arrival") {
+                $this->products = EcomProduct::where('new_arrival',1)->limit(40)->get();
+            } elseif($this->filter_by == "top_selling") {
+                $this->products = EcomProduct::where('top_selling',1)->limit(40)->get();
+            } elseif($this->filter_by == "best_rated") {
+                $this->products = EcomProduct::where('best_rated',1)->limit(40)->get();
+            } elseif($this->filter_by == "hot_product") {
+                $this->products = EcomProduct::where('hot_product',1)->limit(40)->get();
+            } elseif($this->filter_by == "clearense") {
+                $this->products = EcomProduct::where('clearense',1)->limit(40)->get();
+            }
+        }
+        if($this->search_text == "" && $this->category_id == "" && $this->sub_category_id == "" && $this->filter_by == "") {
             $this->products = EcomProduct::limit(40)->get();
         }
     }

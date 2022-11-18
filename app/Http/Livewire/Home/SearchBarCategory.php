@@ -20,7 +20,7 @@ class SearchBarCategory extends Component
     public function search_product()
     {
         if($this->search_text != "") {
-            return redirect('/product-list?s='.$this->search_text);
+            return redirect('/product-list?search='.$this->search_text);
         }
     }
 

@@ -16,7 +16,7 @@
                             $sl = $sl + 1;
                         @endphp
                         <li class="@if(count($sub_categories) > 0) parent @endif @if($sl > 11) cat-link-orther @endif">
-                            <a href="">
+                            <a href="product-list?category={{ $category->id }}">
                                 <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
                                 <span class="text" style="font-size:15px;">{{ $category->category_name }}</span>
                             </a>
@@ -25,7 +25,7 @@
                                 <ul class="categori-list clearfix">
                                     <li class="col-sm-12">
                                         @foreach($sub_categories as $sub_category)
-                                        <strong class="title"><a href="">{{ $sub_category->sub_category_name }}</a></strong>
+                                        <strong class="title"><a href="product-list?subcategory={{ $sub_category->id }}">{{ $sub_category->sub_category_name }}</a></strong>
                                         @endforeach
                                     </li>
                                 </ul>

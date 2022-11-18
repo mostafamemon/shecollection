@@ -20,7 +20,7 @@
                             $sl = $sl + 1;
                         @endphp
                         <li class="@if(count($sub_categories) > 0) parent @endif @if($sl > 11) cat-link-orther @endif">
-                            <a href="">
+                            <a href="product-list?category={{ $category->id }}">
                                 <span class="ctg-icon"><i class="fa fa-th-large"></i></span>
                                 <span class="text">&nbsp;&nbsp;{{ $category->category_name }}</span>
                             </a>
@@ -31,7 +31,7 @@
                                     <li class="col-sm-3">
                                         <ul>
                                         @foreach($sub_categories as $sub_category)
-                                            <li style="padding-top:10px"><a href="">{{ $sub_category->sub_category_name }}</a></li>
+                                            <li style="padding-top:10px"><a href="product-list?subcategory={{ $sub_category->id }}">{{ $sub_category->sub_category_name }}</a></li>
                                         @endforeach
                                         </ul>
                                     </li>
@@ -50,11 +50,11 @@
             <div class="block-nav-menu">
                 <div class="clearfix"><span data-action="close-nav" class="close-nav"><span>close</span></span></div>
                 <ul class="ui-menu">
-                    <li><a href="#"> NEW ARRIVAL </a></li>
-                    <li><a href="#"> TOP SELLING </a></li>
-                    <li><a href="#"> BEST RATED </a></li>
-                    <li><a href="#"> HOT PRODUCTS </a></li>
-                    <li><a href="#"> CLEARENSE </a></li>
+                    <li><a href="product-list?filter=new_arrival"> NEW ARRIVAL </a></li>
+                    <li><a href="product-list?filter=top_selling"> TOP SELLING </a></li>
+                    <li><a href="product-list?filter=best_rated"> BEST RATED </a></li>
+                    <li><a href="product-list?filter=hot_product"> HOT PRODUCTS </a></li>
+                    <li><a href="product-list?filter=clearense"> CLEARENSE </a></li>
                 </ul>
             </div>
         </div>

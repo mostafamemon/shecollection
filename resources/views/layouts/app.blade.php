@@ -88,7 +88,7 @@
                         <div class="col-md-3 nav-left">
                             <!-- logo -->
                             <strong class="logo">
-                                <a href=""><img src="images/media/15.png" height="90" alt="logo"></a>
+                                <a href="/"><img src="images/media/15.png" height="90" alt="logo"></a>
                             </strong>
                         </div>
                         @livewire('home.search-bar-category')
