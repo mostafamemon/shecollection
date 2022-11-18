@@ -27,7 +27,7 @@
                     <ul>
                         @php $sub_categories = get_sub_category($home_page_ctg_1->id); @endphp
                         @foreach($sub_categories as $sub)
-                        @php if($loop->iteration > 18) break; @endphp
+                        @php if($loop->iteration > 17) break; @endphp
                         <li><a wire:click="chageSubCategory_1({{$sub->id}})" style="cursor:pointer;font-size:15px; @if($sub_category_id_1  == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
@@ -168,7 +168,7 @@
                     <ul>
                         @php $sub_categories = get_sub_category($home_page_ctg_2->id); @endphp
                         @foreach($sub_categories as $sub)
-                        @php if($loop->iteration > 18) break; @endphp
+                        @php if($loop->iteration > 17) break; @endphp
                         <li><a wire:click="chageSubCategory_2({{$sub->id}})" style="cursor:pointer;font-size:15px; @if($sub_category_id_2 == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
@@ -309,7 +309,7 @@
                     <ul>
                         @php $sub_categories = get_sub_category($home_page_ctg_3->id); @endphp
                         @foreach($sub_categories as $sub)
-                        @php if($loop->iteration > 18) break; @endphp
+                        @php if($loop->iteration > 17) break; @endphp
                         <li><a wire:click="chageSubCategory_3({{$sub->id}})" style="cursor:pointer;font-size:15px;@if($sub_category_id_3 == $sub->id) color:#F05454; @endif">{{ $sub->sub_category_name}}</a></li>
                         @endforeach
                     </ul>
