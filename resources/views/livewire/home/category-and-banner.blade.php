@@ -50,16 +50,29 @@
                     data-autoplayTimeout="700" 
                     data-autoplay="true" 
                     data-loop="true">
-                    <div class="item item2" style="background-image: url(images/media/index1/owl-banner/banner-1.jpg);" data-dot="1"></div>
-                    <div class="item item1" style="background-image: url(images/media/index1/owl-banner/banner-2.jpg);" data-dot="2"></div>
-                    <div class="item item3" style="background-image: url(images/media/index1/owl-banner/banner-3.jpg);" data-dot="3"></div>
+
+                    @if($banners != "" && $banners->slider_1 != "")
+                    <div class="item item1" style="background-image: url({{$backend_url}}/storage/{{ str_replace('public/', '', $banners->slider_1) }});" data-dot="1"></div>
+                    @endif
+                    @if($banners != "" && $banners->slider_1 != "")
+                    <div class="item item1" style="background-image: url({{$backend_url}}/storage/{{ str_replace('public/', '', $banners->slider_2) }});" data-dot="2"></div>
+                    @endif
+                    @if($banners != "" && $banners->slider_1 != "")
+                    <div class="item item1" style="background-image: url({{$backend_url}}/storage/{{ str_replace('public/', '', $banners->slider_3) }});" data-dot="3"></div>
+                    @endif
                 </div> <!-- slide -->
             </div><!-- block slide top -->
             <!-- banner -->
             <div class="banner-slide">
-                <a href="" class="box-img"><img src="images/media/index1/right-banner-top/right-banner-1.jpg" alt="banner-slide"></a>
-                <a href="" class="box-img"><img src="images/media/index1/right-banner-top/right-banner-2.jpg" alt="banner-slide"></a>
-                <a href="" class="box-img"><img src="images/media/index1/right-banner-top/right-banner-3.jpg" alt="banner-slide"></a>
+            @if($banners != "" && $banners->right_banner_1 != "")
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->right_banner_1) }}" alt="banner-slide"></a>
+            @endif
+            @if($banners != "" && $banners->right_banner_2 != "")
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->right_banner_2) }}" alt="banner-slide"></a>
+            @endif
+            @if($banners != "" && $banners->right_banner_3 != "")
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->right_banner_3) }}" alt="banner-slide"></a>
+            @endif
             </div><!-- banner -->
         </div>
     </div>
