@@ -1,8 +1,8 @@
 <div class="columns container">                  
     <ol class="breadcrumb no-hide">
-        <li><a href="#">Home</a></li>
         <li><a href="#">Product</a></li>
-        <li class="active">Preview</li>
+        <li><a href="#">Preview</a></li>
+        <li class="active">{{ $product->product_name }}</li>
     </ol>
 
     <div class="row">
@@ -15,7 +15,11 @@
                     <div class="product-media media-horizontal">
 
                         <div class="image_preview_container images-large">
+                            @if($product->product_page_main_image != "")
+                            <img id="img_zoom" src="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_main_image) }}" alt="">
+                            @else
                             <img id="img_zoom" src="{{ asset('images/demo/420x512.jpg') }}" alt="">
+                            @endif
                         </div>
                         
                         <div class="product_preview images-small">
@@ -55,32 +59,34 @@
 
                     <div class="product-info-main">
 
-                        <h1 class="page-title">
-                            Advanced Dark Blue Coast
-                        </h1>
+                        <h2 class="page-title">
+                            {{ $product->product_name }}
+                        </h2>
                         <div class="product-reviews-summary">
                             <div class="rating-summary">
-                                <div class="rating-result" title="70%">
-                                    <span style="width:70%;">
-                                        <span><span>70</span>% of <span>100</span></span>
-                                    </span>
+                                <div class="rating-result">
+                                    <span style="width:{{ ($product->user_rating / 5) * 100 }}%;"></span>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="product-info-price">
                             <div class="price-box" style="padding-top:10px;padding-bottom:10px">
-                                <span class="price" style="font-size:26px;color:#F05454">$38.95</span>
+                                <span class="price" style="font-size:26px;color:#F05454">Tk. {{ $product->price }}</span>
                             </div>
                         </div>
                         <div class="product-info-stock">
                             <div class="stock available">
+                                @if($product->in_stock == 1)
                                 <span class="badge badge-success" style="background-color:green;font-size:18px">&nbsp;In Stock&nbsp;</span>
+                                @else
+                                <span class="badge badge-danger" style="background-color:red;font-size:18px">&nbsp;Out of Stock&nbsp;</span>
+                                @endif
                             </div>
                         </div>
                         <div class="product-overview" style="padding-top:10px;font-family:Roboto;font-size:16px">
                             <div class="overview-content">
-                                Vestibulum eu odio. Suspendisse potenti. Morbi mollis tellus ac sapien. Praesent egestas tristique nibh. Nullam dictum felis eu pede mollis pretium. Fusce egestas elit eget lorem. 
+                                {!! $product->short_description !!}
                             </div>
                         </div>
 
@@ -114,16 +120,8 @@
                 <!-- Tab panes -->
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="description" style="font-size:15px">
-                        <div class="block-title">Product Details</div>
                         <div class="block-content">
-                            <p>Morbi mollis tellus ac sapien. Nunc nec neque. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Pellentesque auctor neque nec urna.</p>
-                            <br>
-                            <p>Curabitur suscipit suscipit tellus. Cras id dui. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas vestibulum mollis diam.</p>
-                            <br>
-                            <p>Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Sed lectus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Nam at tortor in tellus interdum sagittis. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est.</p>
-                            <br>
-                            <p>Morbi mollis tellus ac sapien. Nunc nec neque. Praesent nec nisl a purus blandit viverra. Nunc nec neque. Pellentesque auctor neque nec urna.</p>
-                        
+                            {!! $product->long_description !!}
                         </div>
                     </div>
                     <div role="tabpanel" class="tab-pane" id="reviews">
@@ -164,11 +162,15 @@
                 <div class="block-content ">
                     <ol class="product-items owl-carousel " data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":1},"480":{"items":2},"600":{"items":3},"992":{"items":3},"1200":{"items":4}}'>
                         
-                        
+                        @foreach($related_products as $rl_product)
                         <li class="product-item product-item-opt-2">
                             <div class="product-item-info">
                                 <div class="product-item-photo">
-                                    <a href="" class="product-item-img"><img src="images/media/detail/related2-1.jpg" alt="product name"></a>
+                                    @if($rl_product->product_page_main_image != "")
+                                    <a href="product?id={{ $rl_product->id }}" class="product-item-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $rl_product->product_page_main_image) }}" alt="product name"></a>
+                                    @else
+                                    <a href="" class="product-item-img"><img src="images/demo/420x512.jpg" alt="product name"></a>
+                                    @endif
                                     <div class="product-item-actions">
                                         <a href="" class="btn btn-wishlist"><span>wishlist</span></a>
                                         <a href="" class="btn btn-compare"><span>compare</span></a>
@@ -178,7 +180,7 @@
                                     
                                 </div>
                                 <div class="product-item-detail">
-                                    <strong class="product-item-name"><a href="">Brown Short 100% Cotton</a></strong>
+                                    <strong class="product-item-name"><a href="">{{ $rl_product->product_name }}</a></strong>
                                     <div class="clearfix">
                                         <div class="product-item-price">
                                             <span class="price">$45.00</span>
@@ -186,10 +188,8 @@
                                         </div>
                                         <div class="product-reviews-summary">
                                             <div class="rating-summary">
-                                                <div class="rating-result" title="70%">
-                                                    <span style="width:70%">
-                                                        <span><span>70</span>% of <span>100</span></span>
-                                                    </span>
+                                                <div class="rating-result">
+                                                    <span style="width:{{ $rl_product->user_rating / 5 * 100 }}%"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -197,104 +197,8 @@
                                 </div>
                             </div>
                         </li>
-                        
-                        <li class="product-item product-item-opt-2">
-                            <div class="product-item-info">
-                                <div class="product-item-photo">
-                                    <a href="" class="product-item-img"><img src="images/media/detail/related2-2.jpg" alt="product name"></a>
-                                    <div class="product-item-actions">
-                                        <a href="" class="btn btn-wishlist"><span>wishlist</span></a>
-                                        <a href="" class="btn btn-compare"><span>compare</span></a>
-                                        <a href="" class="btn btn-quickview"><span>quickview</span></a>
-                                    </div>
-                                    <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                    
-                                </div>
-                                <div class="product-item-detail">
-                                    <strong class="product-item-name"><a href="">Summer T-Shirt</a></strong>
-                                    <div class="clearfix">
-                                        <div class="product-item-price">
-                                            <span class="price">$45.00</span>
-                                            <span class="old-price">$52.00</span>
-                                        </div>
-                                        <div class="product-reviews-summary">
-                                            <div class="rating-summary">
-                                                <div class="rating-result" title="70%">
-                                                    <span style="width:70%">
-                                                        <span><span>70</span>% of <span>100</span></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item product-item-opt-2">
-                            <div class="product-item-info">
-                                <div class="product-item-photo">
-                                    <a href="" class="product-item-img"><img src="images/media/detail/related2-3.jpg" alt="product name"></a>
-                                    <div class="product-item-actions">
-                                        <a href="" class="btn btn-wishlist"><span>wishlist</span></a>
-                                        <a href="" class="btn btn-compare"><span>compare</span></a>
-                                        <a href="" class="btn btn-quickview"><span>quickview</span></a>
-                                    </div>
-                                    <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                    
-                                </div>
-                                <div class="product-item-detail">
-                                    <strong class="product-item-name"><a href="">Blue Short 50% Cotton</a></strong>
-                                    <div class="clearfix">
-                                        <div class="product-item-price">
-                                            <span class="price">$45.00</span>
-                                            <span class="old-price">$52.00</span>
-                                        </div>
-                                        <div class="product-reviews-summary">
-                                            <div class="rating-summary">
-                                                <div class="rating-result" title="70%">
-                                                    <span style="width:70%">
-                                                        <span><span>70</span>% of <span>100</span></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="product-item product-item-opt-2">
-                            <div class="product-item-info">
-                                <div class="product-item-photo">
-                                    <a href="" class="product-item-img"><img src="images/media/detail/related2-1.jpg" alt="product name"></a>
-                                    <div class="product-item-actions">
-                                        <a href="" class="btn btn-wishlist"><span>wishlist</span></a>
-                                        <a href="" class="btn btn-compare"><span>compare</span></a>
-                                        <a href="" class="btn btn-quickview"><span>quickview</span></a>
-                                    </div>
-                                    <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                    
-                                </div>
-                                <div class="product-item-detail">
-                                    <strong class="product-item-name"><a href="">Brown Short 100% Cotton</a></strong>
-                                    <div class="clearfix">
-                                        <div class="product-item-price">
-                                            <span class="price">$45.00</span>
-                                            <span class="old-price">$52.00</span>
-                                        </div>
-                                        <div class="product-reviews-summary">
-                                            <div class="rating-summary">
-                                                <div class="rating-result" title="70%">
-                                                    <span style="width:70%">
-                                                        <span><span>70</span>% of <span>100</span></span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    
+                        @endforeach
+
                     </ol>
                 </div>
             </div>
