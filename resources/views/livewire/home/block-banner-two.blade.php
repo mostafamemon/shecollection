@@ -1,15 +1,21 @@
 <div class="block-banner-opt1 effect-banner3">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <a href="" class="box-img"><img src="images/media/3-banner-2/banner-1.jpeg" alt="banner"></a>
+            @if($banners != "" && $banners->second_triple_banner_1 != "")
+            <div class="col-sm-4"> 
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->second_triple_banner_1) }}" alt="banner"></a>
             </div>
-            <div class="col-sm-4">
-                <a href="" class="box-img"><img src="images/media/3-banner-2/banner-2.jpeg" alt="banner"></a>
+            @endif
+            @if($banners != "" && $banners->second_triple_banner_2 != "")
+            <div class="col-sm-4"> 
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->second_triple_banner_2) }}" alt="banner"></a>
             </div>
-            <div class="col-sm-4">
-                <a href="" class="box-img"><img src="images/media/3-banner-2/banner-3.jpeg" alt="banner"></a>
+            @endif
+            @if($banners != "" && $banners->second_triple_banner_3 != "")
+            <div class="col-sm-4"> 
+                <a href="" class="box-img"><img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $banners->second_triple_banner_3) }}" alt="banner"></a>
             </div>
+            @endif
         </div>
     </div>
 </div>
