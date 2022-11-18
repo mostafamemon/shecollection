@@ -53,29 +53,29 @@ class ProductList extends Component
     public function filter()
     {
         if($this->search_text != "") {
-            $this->products = EcomProduct::where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
         }
         if($this->category_id != "") {
-            $this->products = EcomProduct::where('category_id',$this->category_id)->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('category_id',$this->category_id)->limit(40)->get();
         }
         if($this->sub_category_id != "") {
-            $this->products = EcomProduct::where('sub_category_id',$this->sub_category_id)->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('sub_category_id',$this->sub_category_id)->limit(40)->get();
         }
         if($this->filter_by != "") {
             if($this->filter_by == "new_arrival") {
-                $this->products = EcomProduct::where('new_arrival',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('new_arrival',1)->limit(40)->get();
             } elseif($this->filter_by == "top_selling") {
-                $this->products = EcomProduct::where('top_selling',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('top_selling',1)->limit(40)->get();
             } elseif($this->filter_by == "best_rated") {
-                $this->products = EcomProduct::where('best_rated',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('best_rated',1)->limit(40)->get();
             } elseif($this->filter_by == "hot_product") {
-                $this->products = EcomProduct::where('hot_product',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('hot_product',1)->limit(40)->get();
             } elseif($this->filter_by == "clearense") {
-                $this->products = EcomProduct::where('clearense',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('clearense',1)->limit(40)->get();
             }
         }
         if($this->search_text == "" && $this->category_id == "" && $this->sub_category_id == "" && $this->filter_by == "") {
-            $this->products = EcomProduct::limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->limit(40)->get();
         }
     }
 
