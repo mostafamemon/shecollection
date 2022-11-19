@@ -26,7 +26,7 @@
                                 <a href="/product?id={{ $wish->product_id }}" >{{ $wish->product_name }}</a>
                             </td>
                             <td class="action">
-                                <button wire:click="removeItem({{$wish->wish_list_id}})" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Add to Cart</button>&nbsp;&nbsp;
+                                <button wire:click="add_to_cart({{$wish->wish_list_id}})" class="btn btn-success"><i class="fa fa-shopping-cart"></i> Add to Cart</button>&nbsp;&nbsp;
                                 <button wire:click="removeItem({{$wish->wish_list_id}})" class="btn btn-danger"><i class="fa fa-trash-o"></i> Remove</button>
                             </td>
                         </tr>

@@ -32,6 +32,25 @@ class WishList extends Component
         }
     }
 
+    public function removeItem($wish_list_id)
+    {
+        EcomWishList::where('id',$wish_list_id)->delete();
+        return redirect()->to('/wishlist');
+    }
+
+    public function add_to_cart($wish_list_id)
+    {
+        $wishlist           = EcomWishList::where('id',$wish_list_id)->first();
+        $cart               = new EcomCart();
+        $cart->user_id      = $wishlist->user_id;
+        $cart->product_id   = $wishlist->product_id;
+        $cart->quantity     = $wishlist->quantity;
+        $cart->save();
+        EcomWishList::where('id',$wish_list_id)->delete();
+        
+        return redirect()->to('/wishlist');
+    }
+
     public function render()
     {
         return view('livewire.wish-list');
