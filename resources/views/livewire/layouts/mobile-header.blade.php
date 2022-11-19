@@ -4,20 +4,24 @@
             <div style="color:white;font-size:18px;">
                 <i class="fa fa-heart-o"></i>
             </div>
+            <a href="/wishlist">
             <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:25px">
                 <div class="badge" style="background-color: yellow;font-size:15px;color:black">{{ $wishlist }}</div>
                 <div style="font-size:14px;margin-top:-3px">Wishlist</div>
             </div>
+            </a>
         </div>
 
         <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
             <div style="color:white;font-size:18px;">
                 <i class="fa fa-opencart"></i>
             </div>
+            <a href="/cart">
             <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:30px">
                 <div class="badge" style="background-color: yellow;font-size:15px;color:black">{{ $carts }}</div>
                 <div style="font-size:14px;margin-top:-3px">My Cart</div>
             </div>
+            </a>
         </div>
 
         <div style="float:right">

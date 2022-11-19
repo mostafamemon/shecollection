@@ -25,19 +25,19 @@ class Cart extends Component
 
         public function mount()
         {
-            $this->backend_url  = config('app.backend_url');
-            $this->name         = Auth::user()->name;
-            $this->email        = Auth::user()->email;
-            $this->phone        = Auth::user()->phone;
-            $this->address      = Auth::user()->address;
-            $this->delivery_location = Auth::user()->delivery_location;
-            if($this->delivery_location == "inside_dhaka") {
-                $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
-            } else {
-                $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
-            }
-
             if(Auth::user() && Auth::user()->id) {
+                $this->backend_url  = config('app.backend_url');
+                $this->name         = Auth::user()->name;
+                $this->email        = Auth::user()->email;
+                $this->phone        = Auth::user()->phone;
+                $this->address      = Auth::user()->address;
+                $this->delivery_location = Auth::user()->delivery_location;
+                if($this->delivery_location == "inside_dhaka") {
+                    $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
+                } else {
+                    $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
+                }
+            
                 $this->carts = EcomCart::where('user_id',Auth::user()->id)
                             ->join('ecom_products', 'ecom_products.id', '=', 'ecom_carts.product_id')
                             ->select(
@@ -62,6 +62,26 @@ class Cart extends Component
             } else {
                 $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
             }
+            
+            $this->backend_url  = config('app.backend_url');
+            $this->name         = Auth::user()->name;
+            $this->email        = Auth::user()->email;
+            $this->phone        = Auth::user()->phone;
+            $this->address      = Auth::user()->address;
+        
+            $this->carts = EcomCart::where('user_id',Auth::user()->id)
+                        ->join('ecom_products', 'ecom_products.id', '=', 'ecom_carts.product_id')
+                        ->select(
+                            'ecom_carts.id as cart_id',
+                            'ecom_carts.quantity',
+                            'ecom_products.id as product_id',
+                            'ecom_products.product_name',
+                            'ecom_products.price',
+                            'ecom_products.in_stock',
+                            'ecom_products.product_page_main_image'
+                        )
+                        ->get();
+
         }
 
         public function removeItem($cart_id)
