@@ -37,11 +37,11 @@
                 @endif
 
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color:#fff;line-height:0px;padding-left:10px">
-                    <div style="padding-top:20px"><a class="dropdown-item" href="#">My Profile</a></div>
-                    <hr/>
-                    <div><a class="dropdown-item" href="#">My Orders</a></div>
-                    <hr/>
-                    <div style="padding-bottom:20px;"><span wire:click="logout" class="dropdown-item" style="color:black">Logout</span></div>
+                    <a class="dropdown-item" href="/my-profile"><div style="padding-top:20px">My Profile</div></a>
+                    <hr style="padding-bottom:0px"/>
+                    <a class="dropdown-item" href="/my-orders"><div style="padding-top:2px">My Orders</div></a>
+                    <hr style="padding-bottom:0px"/>
+                    <span wire:click="logout" class="dropdown-item" style="color:black"><div style="padding-bottom:20px;">Logout</div></span>
                 </div>
             </div>
         </div>
