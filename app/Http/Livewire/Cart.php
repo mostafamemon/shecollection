@@ -2,21 +2,38 @@
 
 namespace App\Http\Livewire;
 
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use App\Models\EcomCart;
 use Auth;
 
 class Cart extends Component
 {
-    public $delivery = "";
+    use LivewireAlert;
+
     public $name     = "";
     public $phone    = "";
     public $email    = "";
     public $address  = "";
     public $delivery_location  = "";
+    public $delivery_charge    = "";
+
+    public $backend_url = "";
 
     public function mount()
     {
+        $this->backend_url  = config('app.backend_url');
+        $this->name         = Auth::user()->name;
+        $this->email        = Auth::user()->email;
+        $this->phone        = Auth::user()->phone;
+        $this->address      = Auth::user()->address;
+        $this->delivery_location = Auth::user()->delivery_location;
+        if($this->delivery_location == "inside_dhaka") {
+            $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
+        } else {
+            $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
+        }
+
         if(Auth::user() && Auth::user()->id) {
             $this->carts = EcomCart::where('user_id',Auth::user()->id)
                         ->join('ecom_products', 'ecom_products.id', '=', 'ecom_carts.product_id')
@@ -32,6 +49,15 @@ class Cart extends Component
                         ->get();
         } else {
             return redirect()->to('/login');
+        }
+    }
+
+    public function onchange_delivery_location()
+    {
+        if($this->delivery_location == "inside_dhaka") {
+            $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
+        } else {
+            $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
         }
     }
 
@@ -60,9 +86,15 @@ class Cart extends Component
         return redirect()->to('/cart');
     }
 
-    public function deliveryCharge()
+    public function checkout($total_price)
     {
-
+        if($total_price == 0) {
+            $this->confirm('Nothing to checkout !', [
+                'icon' => 'warning'
+            ]);
+        } else {
+            
+        }
     }
 
     public function render()

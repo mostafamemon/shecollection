@@ -1,10 +1,31 @@
 <div class="columns container">
     <div class="page-content page-order">
-        <div class="heading-counter warning">Delivery Information:
+        <div class="heading-counter warning"><h4>Delivery Information</h4>
             <div class="row">
                 <div class="col-md-3">
                     <label>Name</label>
-                    <input type="text" wire:model="name"/>
+                    <input type="text" wire:model="name" class="form-control" required/>
+                </div>
+                <div class="col-md-3">
+                    <label>Phone</label>
+                    <input type="text" wire:model="phone" class="form-control" required/>
+                </div>
+                <div class="col-md-3">
+                    <label>Email</label>
+                    <input type="text" wire:model="email" class="form-control" required/>
+                </div>
+                <div class="col-md-3">
+                    <label>Location</label>
+                    <select wire:change="onchange_delivery_location" wire:model="delivery_location" class="form-control" required>
+                        <option value="outside_dhaka">Outside Dhaka</option>
+                        <option value="inside_dhaka">Inside Dhaka</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" style="padding-top:10px">
+                <div class="col-md-12">
+                    <label>Address</label>
+                    <input type="text" wire:model="address" class="form-control" required/>
                 </div>
             </div>
         </div>
@@ -23,7 +44,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @php $total = 0; @endphp
                         @foreach($carts as $cart)
+                        @php 
+                            if($cart->in_stock == 1) {
+                                $price = $cart->quantity * $cart->price; 
+                                $total = $total + $price;
+                            }
+                        @endphp
                         <tr>
                             <td class="cart_product" style="padding:0px;text-align:center">
                                 <a href="/product?id={{ $cart->product_id }}">
@@ -68,24 +96,26 @@
                         <tr>
                             <td rowspan="2" colspan="2"></td>
                             <td colspan="3">
-                                <input type="radio" id="inside_dhaka" name="delivery" value="Inside Dhaka">
-                                <label for="inside_dhaka">Inside Dhaka</label>&nbsp;&nbsp;&nbsp;
-
-                                <input type="radio" name="delivery" value="Outside Dhaka">
-                                <label for="outside_dhaka">Outside Dhaka</label>
+                                <label>Delivery Charge
+                                    <small style="color:#F05454"><i>@if($delivery_location == "inside_dhaka")Inside Dhaka @else Outside Dhaka @endif</i></small>
+                                </label>
                             </td>
-                            <td colspan="2">Tk. </td>
+                            <td colspan="2">Tk. {{ $delivery_charge }}</td>
                         </tr>
                         <tr>
                             <td colspan="3"><strong>Total</strong></td>
-                            <td colspan="2"><strong>122.38 €</strong></td>
+                            <td colspan="2"><strong>Tk. {{ $total + $delivery_charge }}</strong></td>
                         </tr>
                     </tfoot>    
                 </table>
             </div>
             <div class="cart_navigation">
                 <a href="/" class="prev-btn">Continue shopping</a>
-                <a href="/checkout" class="next-btn">Checkout</a>
+                @if($total > 0)
+                <a href="/checkout" wire:click="checkout({{$total}})" class="next-btn">Checkout</a>
+                @else
+                <a href="#" wire:click="checkout({{$total}})" class="next-btn">Checkout</a>
+                @endif
             </div>
         </div>
     </div>
