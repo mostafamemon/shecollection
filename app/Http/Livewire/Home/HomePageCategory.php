@@ -1,13 +1,19 @@
 <?php
 
 namespace App\Http\Livewire\Home;
+use Jantinnerezo\LivewireAlert\LivewireAlert;
 use App\Models\EcomCategory;
 use App\Models\EcomProduct;
+use App\Models\EcomCart;
+use App\Models\EcomWishList;
+use Auth;
 
 use Livewire\Component;
 
 class HomePageCategory extends Component
 {
+    use LivewireAlert;
+
     public $home_page_ctg_1                = "";
     public $backend_url_1                  = "";
     public $sub_category_id_1              = "";
@@ -138,6 +144,50 @@ class HomePageCategory extends Component
                 $products_3->where('sub_category_id',$this->sub_category_id_3);
             }
             $this->products_3 = $products_3->orderBy('product_name','asc')->limit(6)->get();
+        }
+    }
+
+    public function add_to_cart($product_id)
+    {
+        if(Auth::user()) {
+            $already_added = EcomCart::where('user_id',Auth::user()->id)->where('product_id',$product_id)->first();
+            if($already_added == "") {
+                $cart               = new EcomCart();
+                $cart->user_id      = Auth::user()->id;
+                $cart->product_id   = $product_id;
+                $cart->quantity     = 1;
+                $cart->save();
+                $this->emit('updateCart');
+                $this->confirm('Added to your cart');
+            } else {
+                $this->confirm('Already added !', [
+                    'icon' => 'warning'
+                ]);
+            }
+        } else {
+            return redirect()->to('/login');
+        }
+    }
+
+    public function add_to_wishlist($product_id)
+    {
+        if(Auth::user()) {
+            $already_added = EcomWishList::where('user_id',Auth::user()->id)->where('product_id',$product_id)->first();
+            if($already_added == "") {
+                $cart               = new EcomWishList();
+                $cart->user_id      = Auth::user()->id;
+                $cart->product_id   = $product_id;
+                $cart->quantity     = 1;
+                $cart->save();
+                $this->emit('updateWishList');
+                $this->confirm('Added to your Wishlist');
+            } else {
+                $this->confirm('Already added !', [
+                    'icon' => 'warning'
+                ]);
+            }
+        } else {
+            return redirect()->to('/login');
         }
     }
 

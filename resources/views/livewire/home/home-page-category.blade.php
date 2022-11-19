@@ -65,15 +65,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_1[$sl]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_1}}/storage/{{ str_replace('public/', '', $products_1[$sl]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_1[$sl]->id }}"><img alt="product name" src="{{$backend_url_1}}/storage/{{ str_replace('public/', '', $products_1[$sl]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                            <a href="product?id={{ $products_1[$sl]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_1[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button type="button" wire:click="add_to_cart({{ $products_1[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl]->product_name }}</a></strong>
@@ -99,15 +99,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_1[$sl + 1]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_1}}/storage/{{ str_replace('public/', '', $products_1[$sl + 1]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_1[$sl + 1]->id }}"><img alt="product name" src="{{$backend_url_1}}/storage/{{ str_replace('public/', '', $products_1[$sl + 1]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                                <a href="product?id={{ $products_1[$sl + 1]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_1[$sl+1]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl+1]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button wire:click="add_to_cart({{ $products_1[$sl+1]->id }})" type="button" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl + 1]->product_name }}</a></strong>
@@ -206,15 +206,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_2[$sl]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_2}}/storage/{{ str_replace('public/', '', $products_2[$sl]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_2[$sl]->id }}"><img alt="product name" src="{{$backend_url_2}}/storage/{{ str_replace('public/', '', $products_2[$sl]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                                <a href="product?id={{ $products_2[$sl]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_2[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button type="button" wire:click="add_to_cart({{ $products_2[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl]->product_name }}</a></strong>
@@ -240,15 +240,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_2[$sl + 1]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_2}}/storage/{{ str_replace('public/', '', $products_2[$sl + 1]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_2[$sl + 1]->id }}"><img alt="product name" src="{{$backend_url_2}}/storage/{{ str_replace('public/', '', $products_2[$sl + 1]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                                <a href="product?id={{ $products_2[$sl + 1]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_2[$sl + 1]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button type="button" wire:click="add_to_cart({{ $products_2[$sl+1]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl + 1]->product_name }}</a></strong>
@@ -347,15 +347,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_3[$sl]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_3}}/storage/{{ str_replace('public/', '', $products_3[$sl]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_3[$sl]->id }}"><img alt="product name" src="{{$backend_url_3}}/storage/{{ str_replace('public/', '', $products_3[$sl]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                                <a href="product?id={{ $products_3[$sl]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_3[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_3[$sl]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button type="button" wire:click="add_to_cart({{ $products_3[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl]->product_name }}</a></strong>
@@ -381,15 +381,15 @@
                                     <div class="product-item-info">
                                         <div class="product-item-photo">
                                             @if($products_3[$sl + 1]->product_page_main_image !="")
-                                                <img alt="product name" src="{{$backend_url_3}}/storage/{{ str_replace('public/', '', $products_3[$sl + 1]->product_page_main_image) }}">
+                                                <a href="product?id={{ $products_3[$sl + 1]->id }}"><img alt="product name" src="{{$backend_url_3}}/storage/{{ str_replace('public/', '', $products_3[$sl + 1]->product_page_main_image) }}"></a>
                                             @else
-                                                <img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}">
+                                                <a href="product?id={{ $products_3[$sl + 1]->id }}"><img alt="product name" src="{{ asset('images/demo/420x512.jpg') }}"></a>
                                             @endif
                                             <div class="product-item-actions">
-                                                <a class="btn btn-wishlist" href=""><span>wishlist</span></a>
-                                                <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl + 1]->id }}"><span>quickview</span></a>
+                                                <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_3[$sl + 1]->id }})"><span>wishlist</span></span>
+                                                <a class="btn btn-quickview" href="/product?id={{ $products_3[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            <button type="button" wire:click="add_to_cart({{ $products_3[$sl+1]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl + 1]->product_name }}</a></strong>
