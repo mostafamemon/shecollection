@@ -33,4 +33,4 @@ Route::get('/privacy-policy',PrivacyPolicy::class);
 Route::get('/terms-and-condition',TermsAndCondition::class);
 Route::get('/cancellation-and-return',CancellationAndReturn::class);
 Route::get('/my-profile',MyProfile::class);
-Route::get('/my-order',MyOrder::class);
+Route::get('/my-orders',MyOrder::class);
