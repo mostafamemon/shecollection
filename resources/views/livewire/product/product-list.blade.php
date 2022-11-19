@@ -34,7 +34,7 @@
                         <div class="product-item-opt-1">
                             <div class="product-item-info">
                                 <div class="product-item-photo">
-                                    <a href="" class="product-item-img">
+                                    <a href="product?id={{ $product->id }}" class="product-item-img">
                                         @if($product->product_page_main_image != "")
                                         <img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_main_image) }}"/>
                                         @else

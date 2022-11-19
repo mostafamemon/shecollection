@@ -16,7 +16,7 @@ class WishAndCartCounter extends Component
 
     public function mount()
     {
-        if(Auth::user()->id) {
+        if(Auth::user() && Auth::user()->id) {
             $this->carts        = EcomCart::where('user_id',Auth::user()->id)->count();
             $this->wishlist     = EcomWishList::where('user_id',Auth::user()->id)->count();
         } else {
@@ -27,7 +27,7 @@ class WishAndCartCounter extends Component
 
     public function update_cart()
     {
-        if(Auth::user()->id) {
+        if(Auth::user() && Auth::user()->id) {
             $this->carts        = EcomCart::where('user_id',Auth::user()->id)->count();
         } else {
             $this->carts    = 0;
@@ -36,7 +36,7 @@ class WishAndCartCounter extends Component
 
     public function update_wish_list()
     {
-        if(Auth::user()->id) {
+        if(Auth::user() && Auth::user()->id) {
             $this->wishlist     = EcomWishList::where('user_id',Auth::user()->id)->count();
         } else {
             $this->wishlist = 0;
