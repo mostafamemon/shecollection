@@ -8,6 +8,7 @@ use App\Http\Livewire\Product\ProductSingle;
 use App\Http\Livewire\Auth\Login;
 use App\Http\Livewire\Auth\Register;
 use App\Http\Livewire\Cart;
+use App\Http\Livewire\WishList;
 use App\Http\Livewire\SuccessPage;
 use App\Http\Livewire\FailPage;
 
@@ -20,3 +21,4 @@ Route::get('/register',Register::class);
 Route::get('/cart',Cart::class);
 Route::get('/success-page',SuccessPage::class);
 Route::get('/fail-page',FailPage::class);
+Route::get('/wishlist',WishList::class);
