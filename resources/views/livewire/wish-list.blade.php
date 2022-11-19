@@ -16,7 +16,7 @@
                             <td class="cart_product" style="padding:5px;text-align:center">
                                 <a href="/product?id={{ $wish->product_id }}">
                                     @if($wish->product_page_main_image != "")
-                                    <img alt="Product" src="images/demo/420x512.jpg" height="70">
+                                    <img alt="Product" src="{{$backend_url}}/storage/{{ str_replace('public/', '', $wish->product_page_main_image) }}" height="70">
                                     @else
                                     <img alt="Product" src="images/demo/420x512.jpg" height="70">
                                     @endif

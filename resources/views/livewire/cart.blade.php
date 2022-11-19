@@ -16,7 +16,7 @@
                 </div>
                 <div class="col-md-3">
                     <label>Location</label>
-                    <select wire:change="onchange_delivery_location" wire:model="delivery_location" class="form-control" required>
+                    <select wire:change="onchange_delivery_location()" wire:model="delivery_location" class="form-control" required>
                         <option value="outside_dhaka">Outside Dhaka</option>
                         <option value="inside_dhaka">Inside Dhaka</option>
                     </select>
@@ -56,7 +56,7 @@
                             <td class="cart_product" style="padding:0px;text-align:center">
                                 <a href="/product?id={{ $cart->product_id }}">
                                     @if($cart->product_page_main_image != "")
-                                    <img alt="Product" src="images/demo/420x512.jpg" height="70">
+                                    <img alt="Product" src="{{$backend_url}}/storage/{{ str_replace('public/', '', $cart->product_page_main_image) }}" height="70">
                                     @else
                                     <img alt="Product" src="images/demo/420x512.jpg" height="70">
                                     @endif
@@ -94,7 +94,13 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td rowspan="2" colspan="2"></td>
+                            <td rowspan="2" colspan="2" style="text-align:left;padding-left:10px;">
+                                <label>Payment Type:&nbsp;&nbsp;&nbsp;</label>
+                                <input type="radio" id="pay_now" wire:click="onchange_payment_type" wire:model="payment_type" value="pay_now">
+                                <label for="pay_now">Pay Now</label>&nbsp;&nbsp;
+                                <input type="radio" id="cash_on_delivery" wire:click="onchange_payment_type" wire:model="payment_type" value="cash_on_delivery">
+                                <label for="cash_on_delivery">Cash on Delivery</label>
+                            </td>
                             <td colspan="3">
                                 <label>Delivery Charge
                                     <small style="color:#F05454"><i>@if($delivery_location == "inside_dhaka")Inside Dhaka @else Outside Dhaka @endif</i></small>

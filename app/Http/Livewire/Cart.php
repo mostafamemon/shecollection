@@ -19,6 +19,7 @@ class Cart extends Component
         public $address  = "";
         public $delivery_location  = "";
         public $delivery_charge    = "";
+        public $payment_type       = "pay_now";
 
         public $backend_url = "";
         public $carts       = [];
@@ -37,38 +38,14 @@ class Cart extends Component
                 } else {
                     $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
                 }
-            
-                $this->carts = EcomCart::where('user_id',Auth::user()->id)
-                            ->join('ecom_products', 'ecom_products.id', '=', 'ecom_carts.product_id')
-                            ->select(
-                                'ecom_carts.id as cart_id',
-                                'ecom_carts.quantity',
-                                'ecom_products.id as product_id',
-                                'ecom_products.product_name',
-                                'ecom_products.price',
-                                'ecom_products.in_stock',
-                                'ecom_products.product_page_main_image'
-                            )
-                            ->get();
+                $this->query();
             } else {
                 return redirect()->to('/login');
             }
         }
 
-        public function onchange_delivery_location()
+        public function query()
         {
-            if($this->delivery_location == "inside_dhaka") {
-                $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
-            } else {
-                $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
-            }
-            
-            $this->backend_url  = config('app.backend_url');
-            $this->name         = Auth::user()->name;
-            $this->email        = Auth::user()->email;
-            $this->phone        = Auth::user()->phone;
-            $this->address      = Auth::user()->address;
-        
             $this->carts = EcomCart::where('user_id',Auth::user()->id)
                         ->join('ecom_products', 'ecom_products.id', '=', 'ecom_carts.product_id')
                         ->select(
@@ -81,7 +58,21 @@ class Cart extends Component
                             'ecom_products.product_page_main_image'
                         )
                         ->get();
+        }
 
+        public function onchange_delivery_location()
+        {
+            if($this->delivery_location == "inside_dhaka") {
+                $this->delivery_charge = config('app.delivery_charge_inside_dhaka');
+            } else {
+                $this->delivery_charge = config('app.delivery_charge_outside_dhaka');
+            }
+            $this->query();
+        }
+
+        public function onchange_payment_type()
+        {
+            $this->query();
         }
 
         public function removeItem($cart_id)
@@ -95,7 +86,8 @@ class Cart extends Component
             $cart = EcomCart::where('id',$cart_id)->first();
             $cart->quantity = $cart->quantity + 1;
             $cart->save();
-            return redirect()->to('/cart');
+
+            $this->query();
         }
 
         public function reduceQuantity($cart_id)
@@ -106,7 +98,7 @@ class Cart extends Component
                 $cart->save();
             }
 
-            return redirect()->to('/cart');
+            $this->query();
         }
 
         public function checkout($total_price)
@@ -129,34 +121,40 @@ class Cart extends Component
                             )
                             ->get();
 
-                $order                      = new EcomOrder();
-                $order->user_id             = Auth()->user()->id;
-                $order->total               = $total_price;
-                $order->delivery_charge     = $this->delivery_charge;
-                $order->grand_total         = $total_price + $this->delivery_charge;
-                $order->order_date_time     = date('Y-m-d H:i:s');
-                $order->name                = $this->name;
-                $order->phone               = $this->phone;
-                $order->email               = $this->email;
-                $order->address             = $this->address;
-                $order->delivery_location   = $this->delivery_location;
-                $order->status              = "PENDING";
-                $order->save();
+                if($this->payment_type == "cash_on_delivery") {
+                    $order                      = new EcomOrder();
+                    $order->user_id             = Auth()->user()->id;
+                    $order->total               = $total_price;
+                    $order->delivery_charge     = $this->delivery_charge;
+                    $order->grand_total         = $total_price + $this->delivery_charge;
+                    $order->order_date_time     = date('Y-m-d H:i:s');
+                    $order->name                = $this->name;
+                    $order->phone               = $this->phone;
+                    $order->email               = $this->email;
+                    $order->address             = $this->address;
+                    $order->delivery_location   = $this->delivery_location;
+                    $order->payment_type        = $this->payment_type;
+                    $order->status              = "PENDING";
+                    $order->save();
 
-                foreach($my_carts as $cart) {
-                    if($cart->in_stock == 1) {
-                        $order_detail               = new EcomOrderDetail();
-                        $order_detail->order_id     = $order->id;
-                        $order_detail->product_id   = $cart->product_id;
-                        $order_detail->unit_price   = $cart->price;
-                        $order_detail->quantity     = $cart->quantity;
-                        $order_detail->grand_total  = $cart->price * $cart->quantity;
-                        $order_detail->save();
+                    foreach($my_carts as $cart) {
+                        if($cart->in_stock == 1) {
+                            $order_detail               = new EcomOrderDetail();
+                            $order_detail->order_id     = $order->id;
+                            $order_detail->product_id   = $cart->product_id;
+                            $order_detail->unit_price   = $cart->price;
+                            $order_detail->quantity     = $cart->quantity;
+                            $order_detail->grand_total  = $cart->price * $cart->quantity;
+                            $order_detail->save();
+                        }
                     }
-                }
 
-                EcomCart::where('user_id',Auth::user()->id)->delete();
-                return redirect()->to('/success-page');
+                    EcomCart::where('user_id',Auth::user()->id)->delete();
+                    return redirect()->to('/success-page');
+                } else {
+                    dd('ssl commerz upcoming');
+                }
+                
             }
         }
 
