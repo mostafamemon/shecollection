@@ -53,10 +53,10 @@
                         <div class="col-md-3 col-lg-3 col-sm-6">
                             <h3 class="title">QUICK LINKS</h3>
                             <ul class="links">
-                                <li><a href="">Login</a></li>
-                                <li><a href="">Register</a></li>
-                                <li><a href="">My Profile</a></li>
-                                <li><a href="">My Orders</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li><a href="/register">Register</a></li>
+                                <li><a href="/my-profile">My Profile</a></li>
+                                <li><a href="/my-orders">My Orders</a></li>
                             </ul>
                         </div>
                         <div class="col-md-3 col-lg-3 col-sm-6">
