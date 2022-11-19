@@ -93,19 +93,16 @@
                         </div>
 
                         <div class="product-add-form">
-                            <form>
-                                <div class="product-options-bottom clearfix">
-                                    <div class="actions" style="padding-top:15px">
-                                        <button type="submit" title="Add to Cart" class="add_to_cart_button">
-                                            <span><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</span>
-                                        </button>
-                                        <button type="submit" title="Wishlist" class="add_to_wishlist_button">
-                                            <span><i class="fa fa-heart"></i> &nbsp;Wishlist</span>
-                                        </button>
-                                    </div>
+                            <div class="product-options-bottom clearfix">
+                                <div class="actions" style="padding-top:15px">
+                                    <button wire:click="add_to_cart({{ $product->id }})" title="Add to Cart" class="add_to_cart_button">
+                                        <span ><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</span>
+                                    </button>
+                                    <button wire:click="add_to_wishlist({{ $product->id }})" title="Wishlist" class="add_to_wishlist_button">
+                                        <span><i class="fa fa-heart"></i> &nbsp;Wishlist</span>
+                                    </button>
                                 </div>
-
-                            </form>
+                            </div>
                         </div>
                     </div>
 
