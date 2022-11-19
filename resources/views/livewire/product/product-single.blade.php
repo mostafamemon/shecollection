@@ -26,27 +26,29 @@
 
                             <div class="owl-carousel thumbnails_carousel" id="thumbnails"  data-nav="true" data-dots="false" data-margin="10" data-responsive='{"0":{"items":3},"480":{"items":4},"600":{"items":5},"768":{"items":3}}'>
                                 
-                                <a href="#" data-image="images/media/index2/test_image.jpeg" data-zoom-image="images/media/index2/test_image.jpeg">
+                                @if($product->product_page_other_image_1)
+                                <a href="#" data-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_1) }}" data-zoom-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_1) }}">
 
-                                    <img src="images/media/index2/test_image.jpeg" data-large-image="images/media/index2/test_image.jpeg" alt="">
-
-                                </a>
-
-                                <a href="#" data-image="images/media/detail/thumb-img2.jpg" data-zoom-image="images/media/detail/thumb-lag2.jpg">
-
-                                    <img src="images/media/detail/thumb2.jpg" data-large-image="images/media/detail/thumb-img2.jpg" alt="">
+                                    <img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_1) }}" data-large-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_1) }}" alt="">
 
                                 </a>
-                                <a href="#" data-image="images/media/detail/thumb-img3.jpg" data-zoom-image="images/media/detail/thumb-lag3.jpg">
+                                @endif
 
-                                    <img src="images/media/detail/thumb3.jpg" data-large-image="images/media/detail/thumb-img3.jpg" alt="">
+                                @if($product->product_page_other_image_2)
+                                <a href="#" data-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_2) }}" data-zoom-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_2) }}">
 
-                                </a>
-                                <a href="#" data-image="images/media/detail/thumb-img1.jpg" data-zoom-image="images/media/detail/thumb-lag1.jpg">
-
-                                    <img src="images/media/detail/thumb1.jpg" data-large-image="images/media/detail/thumb-img1.jpg" alt="">
+                                    <img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_2) }}" data-large-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_2) }}" alt="">
 
                                 </a>
+                                @endif
+
+                                @if($product->product_page_other_image_3)
+                                <a href="#" data-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_3) }}" data-zoom-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_3) }}">
+
+                                    <img src="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_3) }}" data-large-image="{{$backend_url}}/storage/{{ str_replace('public/', '', $product->product_page_other_image_3) }}" alt="">
+
+                                </a>
+                                @endif
 
                             </div><!--/ .owl-carousel-->
 
@@ -96,6 +98,9 @@
                                     <div class="actions" style="padding-top:15px">
                                         <button type="submit" title="Add to Cart" class="add_to_cart_button">
                                             <span><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</span>
+                                        </button>
+                                        <button type="submit" title="Wishlist" class="add_to_wishlist_button">
+                                            <span><i class="fa fa-heart"></i> &nbsp;Wishlist</span>
                                         </button>
                                     </div>
                                 </div>
@@ -176,8 +181,7 @@
                                         <a href="" class="btn btn-compare"><span>compare</span></a>
                                         <a href="" class="btn btn-quickview"><span>quickview</span></a>
                                     </div>
-                                    <button class="btn btn-cart" type="button"><span>Add to Cart</span></button>
-                                    
+                                    <button class="btn btn-cart" type="button"><span>Add to Cart</span></button> 
                                 </div>
                                 <div class="product-item-detail">
                                     <strong class="product-item-name"><a href="">{{ $rl_product->product_name }}</a></strong>

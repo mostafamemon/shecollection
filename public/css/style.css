@@ -36311,7 +36311,7 @@ img.alignright {
 }
 
 .add_to_cart_button {
-  background-color:#F05454;
+  background-color:#B33D94;
   padding:5px 10px;
   border-radius:5px;
   border: 1px solid #F05454;
@@ -36320,12 +36320,31 @@ img.alignright {
   font-family: Roboto;
 }
 .add_to_cart_button:hover {
-  background-color:#F05454;
+  background-color:#EC008C;
   padding:5px 10px;
   border-radius:5px;
   border: 1px solid #F05454;
   color:white;
-  font-size: 20px;
+  font-family: Roboto;
+}
+
+.add_to_wishlist_button {
+  margin-left:10px;
+  background-color:#EC008C;
+  padding:5px 10px;
+  border-radius:5px;
+  border: 1px solid #F05454;
+  color:white;
+  font-size: 18px;
+  font-family: Roboto;
+}
+.add_to_wishlist_button:hover {
+  margin-left:10px;
+  background-color:#B33D94;
+  padding:5px 10px;
+  border-radius:5px;
+  border: 1px solid #F05454;
+  color:white;
   font-family: Roboto;
 }
 

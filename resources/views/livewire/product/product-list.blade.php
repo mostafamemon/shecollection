@@ -43,7 +43,7 @@
                                     </a>
                                     <div class="product-item-actions">
                                         <span wire:click="add_to_wishlist({{ $product->id }})" class="btn btn-wishlist"><span>wishlist</span></span>
-                                        <a href="" class="btn btn-quickview"><span>quickview</span></a>
+                                        <a href="product?id={{ $product->id }}" class="btn btn-quickview"><span>quickview</span></a>
                                     </div>
                                     <button class="btn btn-cart" type="button" wire:click="add_to_cart({{ $product->id }})"><span>Add to Cart</span></button>
                                 </div>
