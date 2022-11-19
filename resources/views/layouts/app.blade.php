@@ -29,6 +29,7 @@
                     <!-- nav-right -->
                     <ul class=" nav-right">
                         <li><a href="" class="header-top-text">My Orders</a></li>
+                        <li><a href="" class="header-top-text">My Profile</a></li>
                         <li><a href="" class="header-top-text">Contact Us</a></li>
                         <li><a href="" class="header-top-text">
                             <i class="fa fa-facebook-f" style="font-size:16px"></i>&nbsp;&nbsp;
@@ -130,7 +131,6 @@
                                     <h3 class="title">FOLLOW US</h3>
                                     <ul class="links">
                                         <li><a href="">Facebook</a></li>
-                                        <li><a href="">Twitter</a></li>
                                         <li><a href="">Youtube</a></li>
                                         <li><a href="">Instagram</a></li>
                                     </ul>
