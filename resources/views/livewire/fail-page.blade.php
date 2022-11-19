@@ -7,17 +7,17 @@
             background: #EBF0F5;
         }
         h1 {
-          color: #88B04B;
+          color: #F05454;
           font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
           font-weight: 900;
           font-size: 40px;
           margin-bottom: 10px;
         }
       .tickicon {
-        color: #9ABC66;
-        font-size: 100px;
+        color: #F05454;
+        font-size: 120px;
         line-height: 200px;
-        margin-left:-15px;
+        
       }
       .card {
         background: white;
@@ -28,13 +28,13 @@
       }
     </style>
     <div>
-        <div style="text-align:center;border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-            <i class="checkmark tickicon">✓</i>
+        <div style="text-align:center;border-radius:200px; height:200px; width:200px; background: #FFF1F5; margin:0 auto;">
+            <span class="tickicon">&#9888;</span>
         </div>
         <div>
-            <h1>Success</h1> 
+            <h1>Failed</h1> 
             <p style="font-size:16px;font-family:Roboto">We received your purchase request<br/> We'll be in touch shortly!</p>
         </div>
-        <a href="/" class="btn btn-success">Back to Home</a>
+        <a href="/" class="btn btn-danger">Back to Home</a>
     </div>
 </div>
