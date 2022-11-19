@@ -82,7 +82,7 @@
             {{ $slot }}
         </main>
         
-        <footer class="site-footer footer-opt-3" style="padding-top:20px;">
+        <footer class="site-footer footer-opt-3" style="padding-top:20px;text-align:left">
             <div class="footer-content" style="background-image: url(images/media/bg-footer.jpeg);">
                 <div class="block-newletter">
                     <div class="container">

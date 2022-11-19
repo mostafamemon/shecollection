@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use App\Models\EcomCart;
+use App\Models\EcomOrder;
+use App\Models\EcomOrderDetail;
 use Auth;
 
 class Cart extends Component
@@ -19,6 +21,7 @@ class Cart extends Component
     public $delivery_charge    = "";
 
     public $backend_url = "";
+    public $carts       = [];
 
     public function mount()
     {
@@ -86,14 +89,38 @@ class Cart extends Component
         return redirect()->to('/cart');
     }
 
-    public function checkout($total_price)
+    public function checkout($total_price,$delivery_charge,$grand_total)
     {
         if($total_price == 0) {
             $this->confirm('Nothing to checkout !', [
                 'icon' => 'warning'
             ]);
         } else {
-            
+            $order                      = new EcomOrder();
+            $order->user_id             = Auth()->user()->id;
+            $order->total               = $total_price;
+            $order->delivery_charge     = $delivery_charge;
+            $order->grand_total         = $grand_total;
+            $order->order_date_time     = date('Y-m-d H:i:s');
+            $order->name                = $this->name;
+            $order->phone               = $this->phone;
+            $order->email               = $this->email;
+            $order->address             = $this->address;
+            $order->delivery_location   = $this->delivery_location;
+            $order->save();
+
+            foreach($this->carts as $cart) {
+                $order_detail               = new EcomOrderDetail();
+                $order_detail->order_id     = $order->id;
+                $order_detail->product_id   = $cart->product_id;
+                $order_detail->unit_price   = $cart->price;
+                $order_detail->quantity     = $cart->quantity;
+                $order_detail->grand_total  = $cart->price * $cart->quantity;
+                $order_detail->save();
+            }
+
+            EcomCart::where('user_id',Auth::user()->id)->delete();
+            return redirect()->to('/success-page');
         }
     }
 
