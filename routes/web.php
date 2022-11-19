@@ -12,6 +12,9 @@ use App\Http\Livewire\WishList;
 use App\Http\Livewire\SuccessPage;
 use App\Http\Livewire\FailPage;
 use App\Http\Livewire\ContactUs;
+use App\Http\Livewire\PrivacyPolicy;
+use App\Http\Livewire\TermsAndCondition;
+use App\Http\Livewire\CancellationAndReturn;
 
 // Route::get('/',[HomeController::class, 'index']);
 Route::get('/',Index::class);
@@ -24,3 +27,6 @@ Route::get('/success-page',SuccessPage::class);
 Route::get('/fail-page',FailPage::class);
 Route::get('/wishlist',WishList::class);
 Route::get('/contact-us',ContactUs::class);
+Route::get('/privacy-policy',PrivacyPolicy::class);
+Route::get('/terms-and-condition',TermsAndCondition::class);
+Route::get('/cancellation-and-return',CancellationAndReturn::class);

@@ -62,9 +62,9 @@
                         <div class="col-md-3 col-lg-3 col-sm-6">
                             <h3 class="title">INFORMATION</h3>
                             <ul class="links">
-                                <li><a href="">Privacy Policy</a></li>
-                                <li><a href="">Terms & Conditions</a></li>
-                                <li><a href="">Cancellation & Returns</a></li>
+                                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                <li><a href="/terms-and-condition">Terms & Conditions</a></li>
+                                <li><a href="/cancellation-and-return">Cancellation & Returns</a></li>
                                 <li><a href="/contact-us">Contact Us</a></li>
                             </ul>
                         </div>
