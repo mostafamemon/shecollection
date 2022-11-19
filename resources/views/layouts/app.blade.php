@@ -39,46 +39,7 @@
                 </div>
             </div>
             <div class="header-top pc-hide" style="background-color:#e23737;color:white !important;">
-                <div class="container">
-                    <div class="row" style="padding-top:5px;padding-bottom:5px">
-                        <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
-                            <div style="color:white;font-size:18px;">
-                                <i class="fa fa-heart-o"></i>
-                            </div>
-                            <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:25px">
-                                <div class="badge" style="background-color: yellow;font-size:15px;color:black">0</div>
-                                <div style="font-size:14px;margin-top:-3px">Wishlist</div>
-                            </div>
-                        </div>
-
-                        <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
-                            <div style="color:white;font-size:18px;">
-                                <i class="fa fa-opencart"></i>
-                            </div>
-                            <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:30px">
-                                <div class="badge" style="background-color: yellow;font-size:15px;color:black">0</div>
-                                <div style="font-size:14px;margin-top:-3px">My Cart</div>
-                            </div>
-                        </div>
-
-                        <div style="float:right">
-                            <div class="dropdown">
-                                <div style="color:white;padding-right:10px;padding-top:10px;font-size:14px" class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fa fa-user"></i> Mostafa Emon
-                                </div>
-
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color:#fff;line-height:0px;padding-left:10px">
-                                    <div style="padding-top:20px"><a class="dropdown-item" href="#">My Profile</a></div>
-                                    <hr/>
-                                    <div><a class="dropdown-item" href="#">My Orders</a></div>
-                                    <hr/>
-                                    <div style="padding-bottom:20px"><a class="dropdown-item" href="#">Logout</a></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
+                @livewire('layouts.mobile-header')
             </div>
             <!-- header-top -->
             <!-- header-content -->
