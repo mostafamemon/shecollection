@@ -30,7 +30,7 @@
                     <ul class=" nav-right">
                         <li><a href="" class="header-top-text">My Orders</a></li>
                         <li><a href="" class="header-top-text">My Profile</a></li>
-                        <li><a href="" class="header-top-text">Contact Us</a></li>
+                        <li><a href="/contact-us" class="header-top-text">Contact Us</a></li>
                         <li><a href="" class="header-top-text">
                             <i class="fa fa-facebook-f" style="font-size:16px"></i>&nbsp;&nbsp;
                             <i class="fa fa-youtube-play" style="font-size:14px"></i>&nbsp;&nbsp;
@@ -150,7 +150,7 @@
                                         <li><a href="">Privacy Policy</a></li>
                                         <li><a href="">Terms & Conditions</a></li>
                                         <li><a href="">Cancellation & Returns</a></li>
-                                        <li><a href="">Contact Us</a></li>
+                                        <li><a href="/contact-us">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
