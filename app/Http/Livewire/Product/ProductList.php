@@ -5,6 +5,9 @@ namespace App\Http\Livewire\Product;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
 use Livewire\Component;
 use App\Models\EcomProduct;
+use App\Models\EcomCart;
+use App\Models\EcomWishList;
+use Auth;
 
 class ProductList extends Component
 {
@@ -53,35 +56,74 @@ class ProductList extends Component
     public function filter()
     {
         if($this->search_text != "") {
-            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('keywords','like','%'.$this->search_text.'%')->limit(40)->get();
         }
         if($this->category_id != "") {
-            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('category_id',$this->category_id)->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('category_id',$this->category_id)->limit(40)->get();
         }
         if($this->sub_category_id != "") {
-            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('sub_category_id',$this->sub_category_id)->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('sub_category_id',$this->sub_category_id)->limit(40)->get();
         }
         if($this->filter_by != "") {
             if($this->filter_by == "new_arrival") {
-                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('new_arrival',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('new_arrival',1)->limit(40)->get();
             } elseif($this->filter_by == "top_selling") {
-                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('top_selling',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('top_selling',1)->limit(40)->get();
             } elseif($this->filter_by == "best_rated") {
-                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('best_rated',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('best_rated',1)->limit(40)->get();
             } elseif($this->filter_by == "hot_product") {
-                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('hot_product',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('hot_product',1)->limit(40)->get();
             } elseif($this->filter_by == "clearense") {
-                $this->products = EcomProduct::select('id','product_name','product_page_main_image')->where('clearense',1)->limit(40)->get();
+                $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->where('clearense',1)->limit(40)->get();
             }
         }
         if($this->search_text == "" && $this->category_id == "" && $this->sub_category_id == "" && $this->filter_by == "") {
-            $this->products = EcomProduct::select('id','product_name','product_page_main_image')->limit(40)->get();
+            $this->products = EcomProduct::select('id','product_name','product_page_main_image','price')->limit(40)->get();
         }
     }
 
-    public function add_to_cart()
+    public function add_to_cart($product_id)
     {
-        $this->confirm('Added to your cart');
+        if(Auth::user()) {
+            $already_added = EcomCart::where('user_id',Auth::user()->id)->where('product_id',$product_id)->first();
+            if($already_added == "") {
+                $cart               = new EcomCart();
+                $cart->user_id      = Auth::user()->id;
+                $cart->product_id   = $product_id;
+                $cart->quantity     = 1;
+                $cart->save();
+                $this->emit('updateCart');
+                $this->confirm('Added to your cart');
+            } else {
+                $this->confirm('Already added !', [
+                    'icon' => 'warning'
+                ]);
+            }
+        } else {
+            return redirect()->to('/login');
+        }
+    }
+
+    public function add_to_wishlist($product_id)
+    {
+        if(Auth::user()) {
+            $already_added = EcomWishList::where('user_id',Auth::user()->id)->where('product_id',$product_id)->first();
+            if($already_added == "") {
+                $cart               = new EcomWishList();
+                $cart->user_id      = Auth::user()->id;
+                $cart->product_id   = $product_id;
+                $cart->quantity     = 1;
+                $cart->save();
+                $this->emit('updateWishList');
+                $this->confirm('Added to your Wishlist');
+            } else {
+                $this->confirm('Already added !', [
+                    'icon' => 'warning'
+                ]);
+            }
+        } else {
+            return redirect()->to('/login');
+        }
     }
 
     public function render()
