@@ -63,7 +63,7 @@
                                 </a>
                             </td>
                             <td class="cart_description">
-                                <a href="/product?id={{ $cart->product_id }}" >{{ $cart->product_name }} </a>
+                                <a href="/product?id={{ $cart->product_id }}" >{{ $cart->product_name }}</a>
                             </td>
                             <td class="cart_avail">
                                 @if($cart->in_stock == 1)
@@ -82,7 +82,7 @@
                                 <span>
                                 @if($cart->in_stock == 1) 
                                     Tk. {{ $cart->quantity * $cart->price }}
-                                @else <small>Stock Out</small>
+                                @else <small style="color:#F05454">Stock Out</small>
                                 @endif
                                 </span>
                             </td>
@@ -112,7 +112,7 @@
             <div class="cart_navigation">
                 <a href="/" class="prev-btn">Continue shopping</a>
                 @if($total > 0)
-                <a href="/checkout" wire:click="checkout({{$total}})" class="next-btn">Checkout</a>
+                <a href="#" wire:click="checkout({{$total}})" class="next-btn">Checkout</a>
                 @else
                 <a href="#" wire:click="checkout({{$total}})" class="next-btn">Checkout</a>
                 @endif
