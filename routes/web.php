@@ -15,6 +15,8 @@ use App\Http\Livewire\ContactUs;
 use App\Http\Livewire\PrivacyPolicy;
 use App\Http\Livewire\TermsAndCondition;
 use App\Http\Livewire\CancellationAndReturn;
+use App\Http\Livewire\MyProfile;
+use App\Http\Livewire\MyOrder;
 
 // Route::get('/',[HomeController::class, 'index']);
 Route::get('/',Index::class);
@@ -30,3 +32,5 @@ Route::get('/contact-us',ContactUs::class);
 Route::get('/privacy-policy',PrivacyPolicy::class);
 Route::get('/terms-and-condition',TermsAndCondition::class);
 Route::get('/cancellation-and-return',CancellationAndReturn::class);
+Route::get('/my-profile',MyProfile::class);
+Route::get('/my-order',MyOrder::class);

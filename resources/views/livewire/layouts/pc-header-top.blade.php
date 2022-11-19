@@ -10,8 +10,8 @@
     </ul><!-- nav-left -->
     <!-- nav-right -->
     <ul class=" nav-right">
-        <li><a href="" class="header-top-text">My Orders</a></li>
-        <li><a href="" class="header-top-text">My Profile</a></li>
+        <li><a href="/my-orders" class="header-top-text">My Orders</a></li>
+        <li><a href="/my-profile" class="header-top-text">My Profile</a></li>
         <li><a href="/contact-us" class="header-top-text">Contact Us</a></li>
         <li>
             <a href="{{ $facebook_link }}" target="_blank" class="header-top-text">
