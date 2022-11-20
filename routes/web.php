@@ -17,6 +17,7 @@ use App\Http\Livewire\TermsAndCondition;
 use App\Http\Livewire\CancellationAndReturn;
 use App\Http\Livewire\MyProfile;
 use App\Http\Livewire\MyOrder;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 // Route::get('/',[HomeController::class, 'index']);
 Route::get('/',Index::class);
@@ -34,3 +35,19 @@ Route::get('/terms-and-condition',TermsAndCondition::class);
 Route::get('/cancellation-and-return',CancellationAndReturn::class);
 Route::get('/my-profile',MyProfile::class);
 Route::get('/my-orders',MyOrder::class);
+
+// SSLCOMMERZ Start
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+Route::get('/payment', function () {
+    return view('sslcommerz.exampleHosted');
+});
