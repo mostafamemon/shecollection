@@ -121,38 +121,39 @@ class Cart extends Component
                             )
                             ->get();
 
-                if($this->payment_type == "cash_on_delivery") {
-                    $order                      = new EcomOrder();
-                    $order->user_id             = Auth()->user()->id;
-                    $order->total               = $total_price;
-                    $order->delivery_charge     = $this->delivery_charge;
-                    $order->grand_total         = $total_price + $this->delivery_charge;
-                    $order->order_date_time     = date('Y-m-d H:i:s');
-                    $order->name                = $this->name;
-                    $order->phone               = $this->phone;
-                    $order->email               = $this->email;
-                    $order->address             = $this->address;
-                    $order->delivery_location   = $this->delivery_location;
-                    $order->payment_type        = $this->payment_type;
-                    $order->status              = "PENDING";
-                    $order->save();
+                $order                      = new EcomOrder();
+                $order->user_id             = Auth()->user()->id;
+                $order->total               = $total_price;
+                $order->delivery_charge     = $this->delivery_charge;
+                $order->grand_total         = $total_price + $this->delivery_charge;
+                $order->order_date_time     = date('Y-m-d H:i:s');
+                $order->transaction_id      = uniqid();
+                $order->name                = $this->name;
+                $order->phone               = $this->phone;
+                $order->email               = $this->email;
+                $order->address             = $this->address;
+                $order->delivery_location   = $this->delivery_location;
+                $order->payment_type        = $this->payment_type;
+                $order->status              = "PENDING";
+                $order->save();
 
-                    foreach($my_carts as $cart) {
-                        if($cart->in_stock == 1) {
-                            $order_detail               = new EcomOrderDetail();
-                            $order_detail->order_id     = $order->id;
-                            $order_detail->product_id   = $cart->product_id;
-                            $order_detail->unit_price   = $cart->price;
-                            $order_detail->quantity     = $cart->quantity;
-                            $order_detail->grand_total  = $cart->price * $cart->quantity;
-                            $order_detail->save();
-                        }
+                foreach($my_carts as $cart) {
+                    if($cart->in_stock == 1) {
+                        $order_detail               = new EcomOrderDetail();
+                        $order_detail->order_id     = $order->id;
+                        $order_detail->product_id   = $cart->product_id;
+                        $order_detail->unit_price   = $cart->price;
+                        $order_detail->quantity     = $cart->quantity;
+                        $order_detail->grand_total  = $cart->price * $cart->quantity;
+                        $order_detail->save();
                     }
+                }
 
+                if($this->payment_type == "cash_on_delivery") {
                     EcomCart::where('user_id',Auth::user()->id)->delete();
                     return redirect()->to('/success-page');
                 } else {
-                    dd('ssl commerz upcoming');
+                    return redirect()->to('/payment/'.$order->id);
                 }
                 
             }
