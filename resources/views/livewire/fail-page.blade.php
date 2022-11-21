@@ -33,7 +33,7 @@
         </div>
         <div>
             <h1>Failed</h1> 
-            <p style="font-size:16px;font-family:Roboto">We received your purchase request<br/> We'll be in touch shortly!</p>
+            <p style="font-size:16px;font-family:Roboto">Your payment has been failed!</p>
         </div>
         <a href="/" class="btn btn-danger">Back to Home</a>
     </div>

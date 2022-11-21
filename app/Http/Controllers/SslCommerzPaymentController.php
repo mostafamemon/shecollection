@@ -134,7 +134,7 @@ class SslCommerzPaymentController extends Controller
 
     public function send_sms($order_id,$phone)
     {
-        $text = "Thanks for Purchasing! Your order ID: ".str_pad($order_id, 8, '0', STR_PAD_LEFT).". She Collection";
+        $text = "Your order no. ".str_pad($order_id, 8, '0', STR_PAD_LEFT)." has been received. Thanks for your purchase! She Collection";
         if(config('app.sms_service') == "ENABLE") {
             $sms_url    = config('app.sms_url');
             $phone      = "880".substr($phone, -10);

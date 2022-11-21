@@ -23,6 +23,9 @@
                         </div>
                         <div style="padding-top:10px">
                             <button class="btn" id="btn-send-contact">Send</button>
+                            <div wire:loading>
+                                <img src="{{ asset('images/loader.gif') }}"/> Sending ...
+                            </div>
                         </div>
                     </div>
                 </div>

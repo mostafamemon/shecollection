@@ -25,7 +25,9 @@
                             <td class="cart_description text-center">{{ $order->grand_total }}</td>
                             <td class="cart_description text-center">
                                 @if($order->status == "PENDING")
-                                <span class="badge" style="padding:10px;background-color:yellow;color:black">PENDING</span>
+                                <span class="badge" style="padding:5px 10px;background-color:yellow;color:black">PENDING</span>
+                                @elseif($order->status == "PAID")
+                                <span class="badge" style="padding:5px 10px;background-color:green;color:white">PAID</span>
                                 @endif
                             </td>
                             <td class="action">

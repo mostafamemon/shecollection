@@ -35,6 +35,6 @@
             <h1>Success</h1> 
             <p style="font-size:16px;font-family:Roboto">We received your purchase request<br/> We'll be in touch shortly!</p>
         </div>
-        <a href="/" class="btn btn-success">Back to Home</a>
+        <a href="/my-orders" class="btn btn-success">View My Orders</a>
     </div>
 </div>
