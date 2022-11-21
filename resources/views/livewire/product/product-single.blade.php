@@ -95,9 +95,15 @@
                             <div class="product-add-form">
                                 <div class="product-options-bottom clearfix">
                                     <div class="actions" style="padding-top:15px">
+                                        @if($product->in_stock == 1)
                                         <button wire:click="add_to_cart({{ $product->id }})" title="Add to Cart" class="add_to_cart_button">
                                             <span ><i class="fa fa-shopping-cart"></i> &nbsp;Add to Cart</span>
                                         </button>
+                                        @else
+                                        <button title="Add to Cart" class="add_to_cart_button">
+                                            <span ><i class="fa fa-shopping-cart"></i> &nbsp;Out of Stock</span>
+                                        </button>
+                                        @endif
                                         <button wire:click="add_to_wishlist({{ $product->id }})" title="Wishlist" class="add_to_wishlist_button">
                                             <span><i class="fa fa-heart"></i> &nbsp;Wishlist</span>
                                         </button>
@@ -178,7 +184,11 @@
                                             <a href="product?id={{$rl_product->id}}" class="btn btn-quickview"><span>quickview</span></a>
                                         </div>
 
-                                        <button class="btn btn-cart" type="button"><span>Add to Cart</span></button> 
+                                        @if($rl_product->in_stock == 1)
+                                        <button wire:click="add_to_cart({{ $rl_product->id }})" class="btn btn-cart" type="button"><span>Add to Cart</span></button> 
+                                        @else
+                                        <button class="btn btn-cart" type="button"><span>Out of Stock</span></button> 
+                                        @endif
                                     </div>
                                     <div class="product-item-detail">
                                         <strong class="product-item-name"><a href="">{{ $rl_product->product_name }}</a></strong>
