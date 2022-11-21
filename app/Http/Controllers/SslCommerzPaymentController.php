@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use DB;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
+use App\Models\EcomCart;
 use App\Models\EcomOrder;
+use App\Models\EcomOrderDetail;
+use Auth;
 
 class SslCommerzPaymentController extends Controller
 {
@@ -83,19 +85,23 @@ class SslCommerzPaymentController extends Controller
         $amount = $request->input('amount');
         $currency = $request->input('currency');
 
-        $sslc = new SslCommerzNotification();
-        $order_detials = DB::table('ecom_orders')
-            ->where('transaction_id', $tran_id)
-            ->select('transaction_id', 'status', 'grand_total')->first();
+        $sslc   = new SslCommerzNotification();
+        $order  = EcomOrder::where('transaction_id',$tran_id)->first();
 
-        if ($order_detials->status == 'PENDING') {
-            $validation = $sslc->orderValidate($request->all(), $tran_id, 50, $currency);
+        if ($order->status == 'PENDING') {
+            $validation = $sslc->orderValidate($request->all(), $tran_id, $amount, $currency);
             if ($validation) {
+                $order->status = "PAID";
+                $order->save();
+
+                EcomCart::where('user_id',Auth::user()->id)->delete();
                 return redirect()->to('/success-page');
             } else {
+                EcomOrderDetail::where('order_id',$order->id)->delete();
+                EcomOrder::where('id',$order->id)->delete();
                 return redirect()->to('/fail-page');
             }
-        } else if ($order_detials->status == 'PAID') {
+        } else if ($order->status == 'PAID') {
             echo "Transaction is successfully Completed";
         } else {
             echo "Invalid Transaction";
@@ -104,41 +110,25 @@ class SslCommerzPaymentController extends Controller
 
     public function fail(Request $request)
     {
-        return redirect()->to('fail-page');
+        $tran_id = $request->input('tran_id');
+        $order   = EcomOrder::where('transaction_id',$tran_id)->first();
+        EcomOrderDetail::where('order_id',$order->id)->delete();
+        EcomOrder::where('id',$order->id)->delete();
+        return redirect()->to('/fail-page');
     }
 
     public function cancel(Request $request)
     {
-        return redirect()->to('fail-page');
+        $tran_id = $request->input('tran_id');
+        $order   = EcomOrder::where('transaction_id',$tran_id)->first();
+        EcomOrderDetail::where('order_id',$order->id)->delete();
+        EcomOrder::where('id',$order->id)->delete();
+        return redirect()->to('/fail-page');
     }
 
-    // NOT USING CURRENTLY
     public function ipn(Request $request)
     {
-        if ($request->input('tran_id'))
-        {
-            $tran_id = $request->input('tran_id');
-            $order_details = DB::table('ecom_orders')
-                ->where('transaction_id', $tran_id)
-                ->select('transaction_id', 'status', 'grand_total')->first();
-
-            if ($order_details->status == 'PENDING') {
-                $sslc = new SslCommerzNotification();
-                $validation = $sslc->orderValidate($request->all(), $tran_id, $order_details->grand_total, 'BDT');
-                if ($validation == TRUE) {
-                    $update_product = DB::table('ecom_orders')
-                        ->where('transaction_id', $tran_id)
-                        ->update(['status' => 'PAID']);
-                    return redirect()->to('/success-page');
-                }
-            } else if ($order_details->status == 'PAID') {
-                echo "Transaction is already Completed";
-            } else {
-                echo "Invalid Transaction";
-            }
-        } else {
-            echo "Invalid Data";
-        }
+        // CURRENTLY NOT USING AS SAME WORK ORDER VALIDATION ON SUCSESS
     }
 
 }
