@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Mail;
 use Jantinnerezo\LivewireAlert\LivewireAlert;
+use App\Models\EcomTextContent;
 
 class ContactUs extends Component
 {
@@ -14,7 +15,13 @@ class ContactUs extends Component
     public $contact     = "";
     public $subject     = "";
     public $text        = "";
+    public $support_email = "";
 
+    public function mount()
+    {
+        $this->support_email = EcomTextContent::select('support_email')->where('id',1)->first()->support_email;
+    }
+    
     public function send()
     {
         $data = [
@@ -24,7 +31,7 @@ class ContactUs extends Component
             'text' => $this->text
         ];
         Mail::send('mail.contact-us', $data, function($message) {
-            $message->to('mostafaemon.info@gmail.com', 'She Collection')->subject
+            $message->to($this->support_email, 'She Collection')->subject
                ('Contact Us Notification');
             $message->from('support@shecollectionbd.com','She Collection');
         });
