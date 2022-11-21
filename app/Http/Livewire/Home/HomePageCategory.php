@@ -84,7 +84,7 @@ class HomePageCategory extends Component
     public function filter_1()
     {
         if($this->home_page_ctg_1 != "") {
-            $products_1 = EcomProduct::where('category_id',$this->home_page_ctg_1->id);
+            $products_1 = EcomProduct::select('id','product_name','price','product_page_main_image','user_rating')->where('category_id',$this->home_page_ctg_1->id);
             if($this->filter_by_type_1 != "") {
                 if($this->filter_by_type_1 == "new_arrival") {
                     $products_1->where('new_arrival',1);
@@ -106,7 +106,7 @@ class HomePageCategory extends Component
     public function filter_2()
     {
         if($this->home_page_ctg_2 != "") {
-            $products_2 = EcomProduct::where('category_id',$this->home_page_ctg_2->id);
+            $products_2 = EcomProduct::select('id','product_name','price','product_page_main_image','user_rating')->where('category_id',$this->home_page_ctg_2->id);
             if($this->filter_by_type_2 != "") {
                 if($this->filter_by_type_2 == "new_arrival") {
                     $products_2->where('new_arrival',1);
@@ -128,7 +128,7 @@ class HomePageCategory extends Component
     public function filter_3()
     {
         if($this->home_page_ctg_3 != "") {
-            $products_3 = EcomProduct::where('category_id',$this->home_page_ctg_3->id);
+            $products_3 = EcomProduct::select('id','product_name','price','product_page_main_image','user_rating')->where('category_id',$this->home_page_ctg_3->id);
             if($this->filter_by_type_3 != "") {
                 if($this->filter_by_type_3 == "new_arrival") {
                     $products_3->where('new_arrival',1);

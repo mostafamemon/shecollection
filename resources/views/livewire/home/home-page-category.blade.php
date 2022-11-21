@@ -73,7 +73,11 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_1[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl]->id }}"><span>quickview</span></a>
                                             </div>
+                                            @if($products_1[$sl]->in_stock == 1)
                                             <button type="button" wire:click="add_to_cart({{ $products_1[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl]->product_name }}</a></strong>
@@ -107,7 +111,11 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_1[$sl+1]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_1[$sl+1]->id }}"><span>quickview</span></a>
                                             </div>
+                                            @if($products_1[$sl+1]->in_stock == 1)
                                             <button wire:click="add_to_cart({{ $products_1[$sl+1]->id }})" type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_1[$sl + 1]->product_name }}</a></strong>
@@ -214,8 +222,12 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_2[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl]->id }}"><span>quickview</span></a>
                                             </div>
-                                            <button type="button" wire:click="add_to_cart({{ $products_2[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
-                                        </div>
+                                            @if($products_2[$sl]->in_stock == 1)
+                                            <button wire:click="add_to_cart({{ $products_2[$sl]->id }})" type="button" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
+                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl]->product_name }}</a></strong>
                                             <div class="clearfix">
@@ -248,7 +260,11 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_2[$sl + 1]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_2[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
+                                            @if($products_2[$sl+1]->in_stock == 1)
                                             <button type="button" wire:click="add_to_cart({{ $products_2[$sl+1]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_2[$sl + 1]->product_name }}</a></strong>
@@ -355,7 +371,11 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_3[$sl]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_3[$sl]->id }}"><span>quickview</span></a>
                                             </div>
+                                            @if($products_3[$sl]->in_stock == 1)
                                             <button type="button" wire:click="add_to_cart({{ $products_3[$sl]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl]->product_name }}</a></strong>
@@ -389,7 +409,11 @@
                                                 <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $products_3[$sl + 1]->id }})"><span>wishlist</span></span>
                                                 <a class="btn btn-quickview" href="/product?id={{ $products_3[$sl + 1]->id }}"><span>quickview</span></a>
                                             </div>
+                                            @if($products_3[$sl+1]->in_stock == 1)
                                             <button type="button" wire:click="add_to_cart({{ $products_3[$sl+1]->id }})" class="btn btn-cart"><span>Add to Cart</span></button>
+                                            @else
+                                            <button type="button" class="btn btn-cart"><span>Out of Stock</span></button>
+                                            @endif
                                         </div>
                                         <div class="product-item-detail">
                                             <strong class="product-item-name"><a href="">{{ $products_3[$sl + 1]->product_name }}</a></strong>
