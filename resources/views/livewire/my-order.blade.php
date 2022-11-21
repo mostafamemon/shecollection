@@ -18,16 +18,24 @@
                     <tbody>
                         @foreach($orders as $order)
                         <tr>
-                            <td class="cart_product text-center">{{ str_pad($order->id, 8, '0', STR_PAD_LEFT); }}</td>
+                            <td class="cart_product text-center">{{ str_pad($order->id, 8, '0', STR_PAD_LEFT) }}</td>
                             <td class="cart_description text-center">{{ date('d M, Y',strtotime($order->order_date_time)) }}</td>
                             <td class="cart_description text-center">{{ $order->total }}</td>
                             <td class="cart_description text-center">{{ $order->delivery_charge }}</td>
                             <td class="cart_description text-center">{{ $order->grand_total }}</td>
                             <td class="cart_description text-center">
                                 @if($order->status == "PENDING")
-                                <span class="badge" style="padding:5px 10px;background-color:yellow;color:black">PENDING</span>
+                                    <span class="badge" style="background-color:yellow;color:black">PENDING</span>
                                 @elseif($order->status == "PAID")
-                                <span class="badge" style="padding:5px 10px;background-color:green;color:white">PAID</span>
+                                    <span class="badge" style="background-color:#D1F2EB;color:black">PAID</span>
+                                @elseif($order->status == "PROCESSING")
+                                    <span class="badge" style="background-color:#5DADE2;color:white">PROCESSING</span>
+                                @elseif($order->status == "SHIPPED")
+                                    <span class="badge" style="background-color:#D2B4DE;color:black">SHIPPED</span>
+                                @elseif($order->status == "DELIVERED")
+                                    <span class="badge" style="background-color:green;color:white">DELIVERED</span>
+                                @elseif($order->status == "CANCELLED")
+                                    <span class="badge" style="background-color:black;color:white">CANCELLED</span>
                                 @endif
                             </td>
                             <td class="action">
