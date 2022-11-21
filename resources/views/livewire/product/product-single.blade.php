@@ -161,7 +161,7 @@
                     <div class="block-title">
                         <strong class="title">RELATED products</strong>
                     </div>
-                    <div class="block-content ">
+                    <div class="block-content " wire:ignore>
                         <ol class="product-items owl-carousel " data-nav="true" data-dots="false" data-margin="30" data-responsive='{"0":{"items":1},"480":{"items":2},"600":{"items":3},"992":{"items":3},"1200":{"items":4}}'>
                             
                             @foreach($related_products as $rl_product)
@@ -174,18 +174,17 @@
                                         <a href="" class="product-item-img"><img src="images/demo/420x512.jpg" alt="product name"></a>
                                         @endif
                                         <div class="product-item-actions">
-                                            <a href="" class="btn btn-wishlist"><span>wishlist</span></a>
-                                            <a href="" class="btn btn-compare"><span>compare</span></a>
-                                            <a href="" class="btn btn-quickview"><span>quickview</span></a>
+                                            <span class="btn btn-wishlist" wire:click="add_to_wishlist({{ $rl_product->id }})"><span>wishlist</span></span>
+                                            <a href="product?id={{$rl_product->id}}" class="btn btn-quickview"><span>quickview</span></a>
                                         </div>
+
                                         <button class="btn btn-cart" type="button"><span>Add to Cart</span></button> 
                                     </div>
                                     <div class="product-item-detail">
                                         <strong class="product-item-name"><a href="">{{ $rl_product->product_name }}</a></strong>
                                         <div class="clearfix">
                                             <div class="product-item-price">
-                                                <span class="price">$45.00</span>
-                                                <span class="old-price">$52.00</span>
+                                                <span class="price">Tk. {{ $rl_product->price }}</span>
                                             </div>
                                             <div class="product-reviews-summary">
                                                 <div class="rating-summary">
