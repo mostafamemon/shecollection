@@ -45,7 +45,11 @@
                                         <span wire:click="add_to_wishlist({{ $product->id }})" class="btn btn-wishlist"><span>wishlist</span></span>
                                         <a href="product?id={{ $product->id }}" class="btn btn-quickview"><span>quickview</span></a>
                                     </div>
+                                    @if($product->in_stock == 1)
                                     <button class="btn btn-cart" type="button" wire:click="add_to_cart({{ $product->id }})"><span>Add to Cart</span></button>
+                                    @else
+                                    <button class="btn btn-cart" type="button"><span>Out of Stock</span></button>
+                                    @endif
                                 </div>
                                 <div class="product-item-detail">
                                     <strong class="product-item-name"><a href="">{{ $product->product_name }}</a></strong>
