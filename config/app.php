@@ -18,6 +18,9 @@ return [
     'name' => env('APP_NAME', 'Laravel'),
     'backend_url' => env('BACKEND_URL', 'http://google.com'),
     'sslcommerz_success_url' => env('SSLCZ_SUCCESS_URL', 'https://shecollectionbd.com/success'),
+    'sslcommerz_fail_url' => env('SSLCZ_FAIL_URL', 'https://shecollectionbd.com/fail'),
+    'sslcommerz_cancel_url' => env('SSLCZ_CANCEL_URL', 'https://shecollectionbd.com/cancel'),
+    'sslcommerz_ipn_url' => env('SSLCZ_IPN_URL', 'https://shecollectionbd.com/ipn'),
     'delivery_charge_inside_dhaka' => env('DELIVERY_CHARGE_INSIDE_DHAKA', '50'),
     'delivery_charge_outside_dhaka' => env('DELIVERY_CHARGE_OUTSIDE_DHAKA', '40'),
 

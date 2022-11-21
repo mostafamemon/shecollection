@@ -17,7 +17,7 @@ return [
 	],
 	'apiDomain' => $apiDomain,
 	'connect_from_localhost' => true, // For Sandbox, use "true", For Live, use "false"
-	'success_url' => '/success',
+	'success_url' => '/success-page',
 	'failed_url' => '/fail-page',
 	'cancel_url' => '/fail-page',
 	'ipn_url' => '/ipn',
