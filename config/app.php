@@ -21,6 +21,8 @@ return [
     'sslcommerz_fail_url' => env('SSLCZ_FAIL_URL', 'https://shecollectionbd.com/fail'),
     'sslcommerz_cancel_url' => env('SSLCZ_CANCEL_URL', 'https://shecollectionbd.com/cancel'),
     'sslcommerz_ipn_url' => env('SSLCZ_IPN_URL', 'https://shecollectionbd.com/ipn'),
+    'sms_service' => env('SMS_SERVICE', 'https://shecollectionbd.com'),
+    'sms_url' => env('SMS_URL', 'https://shecollectionbd.com'),
     'delivery_charge_inside_dhaka' => env('DELIVERY_CHARGE_INSIDE_DHAKA', '50'),
     'delivery_charge_outside_dhaka' => env('DELIVERY_CHARGE_OUTSIDE_DHAKA', '40'),
 

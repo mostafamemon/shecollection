@@ -95,6 +95,7 @@ class SslCommerzPaymentController extends Controller
                 $order->save();
 
                 EcomCart::where('user_id',Auth::user()->id)->delete();
+                $this->send_sms($order->id,$order->phone);
                 return redirect()->to('/success-page');
             } else {
                 EcomOrderDetail::where('order_id',$order->id)->delete();
@@ -129,6 +130,23 @@ class SslCommerzPaymentController extends Controller
     public function ipn(Request $request)
     {
         // CURRENTLY NOT USING AS SAME WORK ORDER VALIDATION ON SUCSESS
+    }
+
+    public function send_sms($order_id,$phone)
+    {
+        $text = "Thanks for Purchasing! Your order ID: ".str_pad($order_id, 8, '0', STR_PAD_LEFT).". She Collection";
+        if(config('app.sms_service') == "ENABLE") {
+            $sms_url    = config('app.sms_url');
+            $phone      = "880".substr($phone, -10);
+            $sms_url    = str_replace("<destination>", $phone, $sms_url);
+            $sms_url    = str_replace("<message>", urlencode($text), $sms_url);
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $sms_url);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            curl_exec($ch);
+            curl_close($ch);
+        }
     }
 
 }
