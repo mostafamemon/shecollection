@@ -1,8 +1,8 @@
 <div class="container">
     <div class="row" style="padding-top:5px;padding-bottom:5px">
-        <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
+        <div style="float:left;padding-top:5px;padding-right: 0px;">
             <a href="/wishlist">
-            <div style="float:left;color:white;float:left;font-size:18px;padding-left:25px">
+            <div style="float:left;color:white;float:left;font-size:18px;margin-top:-10px;padding-left:25px">
                 <div class="badge" style="background-color: white;font-size:15px;color:black"><i class="fa fa-home"></i></div>
                 <div style="font-size:13px;margin-top:-3px">Home</div>
             </div>
