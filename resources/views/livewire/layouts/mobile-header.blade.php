@@ -5,8 +5,8 @@
                 <i class="fa fa-home"></i>
             </div>
             <a href="/">
-            <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:25px">
-                <div style="font-size:14px;margin-top:-3px">Home</div>
+            <div style="float:left;color:white;float:left;font-size:18px;padding-left:25px">
+                <div style="font-size:13px;margin-top:-3px">Home</div>
             </div>
             </a>
         </div>
@@ -17,8 +17,8 @@
             </div>
             <a href="/wishlist">
             <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:25px">
-                <div class="badge" style="background-color: yellow;font-size:15px;color:black">{{ $wishlist }}</div>
-                <div style="font-size:14px;margin-top:-3px">Wishlist</div>
+                <div class="badge" style="background-color: yellow;font-size:14px;color:black">{{ $wishlist }}</div>
+                <div style="font-size:13px;margin-top:-3px">Wishlist</div>
             </div>
             </a>
         </div>
@@ -29,8 +29,8 @@
             </div>
             <a href="/cart">
             <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:30px">
-                <div class="badge" style="background-color: yellow;font-size:15px;color:black">{{ $carts }}</div>
-                <div style="font-size:14px;margin-top:-3px">My Cart</div>
+                <div class="badge" style="background-color: yellow;font-size:14px;color:black">{{ $carts }}</div>
+                <div style="font-size:13px;margin-top:-3px">My Cart</div>
             </div>
             </a>
         </div>
