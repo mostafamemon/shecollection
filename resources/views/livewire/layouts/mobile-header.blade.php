@@ -5,13 +5,13 @@
                 <i class="fa fa-home"></i>
             </div>
             <a href="/">
-            <div style="float:left;color:white;float:left;font-size:18px;padding-left:25px">
+            <div style="float:left;color:white;float:left;margin-top:-20px;font-size:18px;padding-left:25px">
                 <div style="font-size:13px;margin-top:-3px">Home</div>
             </div>
             </a>
         </div>
 
-        <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
+        <div style="float:left;padding-top:5px;padding-left: 10px;padding-right: 0px;">
             <div style="color:white;font-size:18px;">
                 <i class="fa fa-heart-o"></i>
             </div>
@@ -23,7 +23,7 @@
             </a>
         </div>
 
-        <div style="float:left;padding-top:5px;padding-left: 15px;padding-right: 0px;">
+        <div style="float:left;padding-top:5px;padding-left: 10px;padding-right: 0px;">
             <div style="color:white;font-size:18px;">
                 <i class="fa fa-opencart"></i>
             </div>
