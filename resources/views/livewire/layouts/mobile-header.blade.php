@@ -4,8 +4,9 @@
             <div style="color:white;font-size:18px;">
                 <i class="fa fa-home"></i>
             </div>
-            <a href="/">
-            <div style="float:left;color:white;float:left;margin-top:-20px;font-size:18px;padding-left:25px">
+            <a href="/wishlist">
+            <div style="float:left;color:white;float:left;font-size:18px;margin-top:-35px;padding-left:25px">
+                <div class="badge" style="background-color: white;font-size:14px;color:black"><i class="fa fa-home"></i></div>
                 <div style="font-size:13px;margin-top:-3px">Home</div>
             </div>
             </a>
