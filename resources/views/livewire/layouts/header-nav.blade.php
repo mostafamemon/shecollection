@@ -50,6 +50,7 @@
             <div class="block-nav-menu">
                 <div class="clearfix"><span data-action="close-nav" class="close-nav"><span>close</span></span></div>
                 <ul class="ui-menu">
+                    <li><a href="/"> HOME </a></li>
                     <li><a href="product-list?filter=new_arrival"> NEW ARRIVAL </a></li>
                     <li><a href="product-list?filter=top_selling"> TOP SELLING </a></li>
                     <li><a href="product-list?filter=best_rated"> BEST RATED </a></li>
